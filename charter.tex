@@ -565,35 +565,136 @@ A su vez, cada tarea ha sido asignada una prioridad relativa (Alta, Media o Baja
 \rowcolor[HTML]{C0C0C0}
 Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
 
-HU1 & Cargar y validar la estructura del dataset histórico en entorno Python (pandas) & 6 h & Alta \\ \hline
-HU1 & Realizar análisis exploratorio (EDA) con estadísticas y gráficos de distribución & 8 h & Alta \\ \hline
+HU1 & Analizar el alcance del proyecto y elaborar una primera versión del cronograma general & 6 h & Alta \\ \hline
+HU1 & Dividir el proyecto en fases alineadas con las épicas e identificar dependencias entre ellas & 4 h & Alta \\ \hline
+HU1 & Diseñar un plan de sprints tentativo con hitos intermedios y fechas de revisión & 6 h & Alta \\ \hline
+HU1 & Revisar el cronograma con el director y ajustar el plan según observaciones & 2 h & Alta \\ \hline
 
-HU2 & Clasificar variables por tipo y relevancia técnica (numéricas, categóricas, target) & 5 h & Media \\ \hline
-HU2 & Documentar variables clave e identificar posibles correlaciones redundantes & 6 h & Alta \\ \hline
+HU2 & Establecer una rutina de seguimiento semanal o quincenal para evaluar avances y desvíos & 2 h & Media \\ \hline
+HU2 & Actualizar backlog y tareas en función de retroalimentación o bloqueos técnicos & 4 h & Media \\ \hline
+HU2 & Ajustar cronograma o redistribuir tareas en función del progreso real (replanificación) & 4 h & Media \\ \hline
+HU2 & Documentar los cambios realizados sobre el plan y justificar desviaciones & 2 h & Media \\ \hline
 
-HU3 & Analizar distribución de clases de la variable objetivo (préstamo suficiente) & 4 h & Media \\ \hline
-HU3 & Implementar técnica de balanceo (SMOTE o submuestreo) y validar resultados & 6 h & Alta \\ \hline
+HU3 & Importar el dataset en entorno de trabajo (Python) y validar estructura general & 4 h & Alta \\ \hline
+HU3 & Identificar y cuantificar valores nulos, inconsistentes o duplicados & 4 h & Alta \\ \hline
+HU3 & Realizar limpieza inicial: imputación, eliminación de duplicados y errores obvios & 6 h & Alta \\ \hline
+HU3 & Analizar la distribución de variables numéricas mediante histogramas y boxplots & 6 h & Alta \\ \hline
+HU3 & Detectar y tratar outliers utilizando técnicas estadísticas (IQR, Z-score) & 6 h & Alta \\ \hline
+HU3 & Generar un informe exploratorio con visualizaciones y estadísticas descriptivas & 6 h & Alta \\ \hline
+HU3 & Dividir el dataset en subconjuntos por tipo de proyecto o año (si aplica) & 4 h & Media \\ \hline
+HU3 & Documentar el pipeline de limpieza con justificación de decisiones & 4 h & Alta \\ \hline
 
-HU4 & Codificar variables categóricas con one-hot encoding & 4 h & Alta \\ \hline
-HU4 & Normalizar y/o estandarizar variables numéricas & 4 h & Alta \\ \hline
+HU4 & Clasificar variables por tipo (numéricas, categóricas, temporales, target) & 4 h & Alta \\ \hline
+HU4 & Evaluar correlaciones entre variables numéricas y redundancia (matriz de correlación) & 6 h & Alta \\ \hline
+HU4 & Analizar cardinalidad de variables categóricas y detectar categorías raras o desbalanceadas & 4 h & Media \\ \hline
+HU4 & Realizar análisis de varianza (ANOVA) o chi-cuadrado para evaluar importancia de variables & 6 h & Alta \\ \hline
+HU4 & Generar ranking de variables relevantes con técnicas automáticas (feature importance) & 6 h & Alta \\ \hline
+HU4 & Redactar informe técnico con las variables seleccionadas, criterios y limitaciones & 6 h & Alta \\ \hline
 
-HU5 & Implementar modelo de clasificación (Random Forest o XGBoost) & 6 h & Alta \\ \hline
-HU5 & Evaluar modelo con F1-score y curva ROC; ajustar hiperparámetros básicos & 6 h & Alta \\ \hline
+HU3 (Complementaria) & Investigar e incorporar información contextual externa (región, inflación, etc.) & 6 h & Media \\ \hline
+HU4 (Opcional) & Aplicar técnicas de reducción de dimensionalidad (PCA o UMAP) y evaluar impacto & 6 h & Baja \\ \hline
+HU4 (Complementaria) & Visualizar relaciones multivariadas mediante pairplots o mapas de calor & 4 h & Media \\ \hline
+HU4 (Opcional) & Realizar clustering exploratorio para entender segmentos de proyectos & 6 h & Baja \\ \hline
 
-HU6 & Entrenar modelo de regresión multivariada (XGBoost Regressor) & 6 h & Alta \\ \hline
-HU6 & Evaluar modelo con MAE, RMSE y R² en datos de test & 6 h & Alta \\ \hline
+HU5 & Analizar distribución de la variable objetivo y su desbalance (visual y cuantitativa) & 4 h & Media \\ \hline
+HU5 & Implementar técnica de balanceo simple (undersampling o oversampling clásico) & 4 h & Media \\ \hline
+HU5 & Evaluar impacto del balanceo sobre la distribución de variables & 4 h & Media \\ \hline
+HU5 & Implementar SMOTE y variantes avanzadas (BorderlineSMOTE, ADASYN) & 6 h & Alta \\ \hline
+HU5 & Comparar modelos entrenados con y sin balanceo y medir impacto en F1-score & 6 h & Alta \\ \hline
+HU5 & Documentar estrategia de balanceo adoptada y razones de su elección & 4 h & Alta \\ \hline
+HU5 & Validar el pipeline de balanceo con conjuntos de validación cruzada & 4 h & Alta \\ \hline
 
-HU7 & Aplicar técnica de interpretabilidad (SHAP o Feature Importance) & 5 h & Media \\ \hline
-HU7 & Generar visualizaciones e interpretación de variables más influyentes & 5 h & Media \\ \hline
+HU6 & Codificar variables categóricas nominales con one-hot encoding & 4 h & Alta \\ \hline
+HU6 & Codificar variables categóricas ordinales con label encoding o mappings personalizados & 4 h & Alta \\ \hline
+HU6 & Normalizar variables numéricas (min-max) y evaluar escalas & 4 h & Alta \\ \hline
+HU6 & Estandarizar variables numéricas (z-score) y comparar con normalización & 4 h & Alta \\ \hline
+HU6 & Analizar la sensibilidad de los modelos a diferentes esquemas de codificación & 4 h & Media \\ \hline
+HU6 & Evaluar correlaciones post-codificación para evitar colinealidades artificiales & 4 h & Media \\ \hline
+HU6 & Implementar un pipeline reproducible de preprocesamiento (usando `Pipeline` de scikit-learn) & 6 h & Alta \\ \hline
+HU6 & Validar integridad de los datos procesados (dimensiones, tipos, escalas esperadas) & 4 h & Alta \\ \hline
+HU6 & Documentar las decisiones de transformación de datos, con gráficos de antes y después & 4 h & Alta \\ \hline
 
-HU8 & Redactar documentación técnica del pipeline y decisiones de modelado & 6 h & Alta \\ \hline
-HU8 & Elaborar informe académico con gráficos, métricas y justificación del enfoque & 6 h & Alta \\ \hline
+HU5 (Complementaria) & Probar técnicas de balanceo basadas en generación de ruido o augmentación sintética & 4 h & Baja \\ \hline
+HU6 (Opcional) & Probar codificación target encoding y evaluar sobreajuste con K-fold & 6 h & Baja \\ \hline
+HU6 (Complementaria) & Desarrollar funciones propias reutilizables para codificación y escalamiento & 6 h & Media \\ \hline
+HU6 (Opcional) & Generar versiones comprimidas del dataset para ejecución más rápida de modelos & 4 h & Baja \\ \hline
 
-HU5 (Opcional) & Comparar el modelo de clasificación con una regresión logística base & 5 h & Baja \\ \hline
-HU6 (Opcional) & Entrenar modelo alternativo de regresión (p. ej. LightGBM o redes neuronales) & 6 h & Baja \\ \hline
-HU3 (Complementaria) & Aplicar técnicas de reducción de dimensionalidad (PCA) y analizar impacto & 5 h & Media \\ \hline
-HU7 (Complementaria) & Evaluar sensibilidad de predicciones ante cambios simulados en las variables & 6 h & Media \\ \hline
-HU8 (Opcional) & Preparar presentación tipo pitch técnico para stakeholders internos (no académica) & 4 h & Baja \\ \hline
+HU7 & Seleccionar y justificar algoritmos candidatos para clasificación (p. ej., RF, XGBoost) & 4 h & Alta \\ \hline
+HU7 & Implementar modelo base de clasificación y entrenarlo con datos preprocesados & 6 h & Alta \\ \hline
+HU7 & Realizar validación cruzada (k-fold) y medir F1-score y AUC promedio & 6 h & Alta \\ \hline
+HU7 & Ajustar hiperparámetros (grid search o random search) y registrar mejoras & 6 h & Alta \\ \hline
+HU7 & Evaluar modelo en conjunto de prueba (hold-out) y registrar métricas finales & 4 h & Alta \\ \hline
+HU7 & Analizar matriz de confusión y distribución de errores por clase & 4 h & Media \\ \hline
+HU7 & Comparar resultados con modelo base (regresión logística o árbol simple) & 4 h & Media \\ \hline
+HU7 & Documentar arquitectura, parámetros y desempeño del modelo final de clasificación & 4 h & Alta \\ \hline
+
+HU8 & Seleccionar algoritmos de regresión adecuados (XGBoost, LightGBM, regresión múltiple) & 4 h & Alta \\ \hline
+HU8 & Implementar modelo base de regresión y entrenar con datos preprocesados & 6 h & Alta \\ \hline
+HU8 & Realizar validación cruzada (k-fold) y evaluar MAE, RMSE, R² & 6 h & Alta \\ \hline
+HU8 & Aplicar técnicas de regularización (Lasso, Ridge) y comparar impacto & 4 h & Media \\ \hline
+HU8 & Afinar hiperparámetros y evaluar mejora sobre conjunto de validación & 6 h & Alta \\ \hline
+HU8 & Evaluar modelo en conjunto de prueba, generar gráfico de dispersión real vs. predicho & 4 h & Alta \\ \hline
+HU8 & Analizar errores por categoría presupuestaria y posibles sesgos & 4 h & Media \\ \hline
+HU8 & Documentar resultados del modelo final y su aplicabilidad práctica & 4 h & Alta \\ \hline
+
+HU7 (Complementaria) & Entrenar variante del modelo de clasificación con LightGBM & 4 h & Media \\ \hline
+HU8 (Complementaria) & Comparar modelo de regresión con red neuronal simple (MLP) & 6 h & Baja \\ \hline
+HU7 (Opcional) & Implementar curva Precision-Recall y optimizar umbral de decisión & 4 h & Baja \\ \hline
+HU8 (Opcional) & Evaluar sensibilidad del modelo a outliers y aplicar técnicas de robustez & 4 h & Baja \\ \hline
+
+HU9 & Implementar método de interpretabilidad basado en SHAP para el modelo de clasificación & 6 h & Alta \\ \hline
+HU9 & Visualizar los valores SHAP globales (summary plot) e identificar variables más influyentes & 4 h & Alta \\ \hline
+HU9 & Generar interpretaciones locales de predicciones individuales (force plots) & 4 h & Media \\ \hline
+HU9 & Aplicar análisis de importancia de variables por método de permutación (como alternativa) & 4 h & Media \\ \hline
+HU9 & Comparar resultados de SHAP con Feature Importance tradicional (XGBoost, LightGBM) & 4 h & Media \\ \hline
+HU9 & Evaluar consistencia entre modelos de clasificación y regresión respecto a variables clave & 4 h & Media \\ \hline
+HU9 & Preparar gráficos explicativos de interpretabilidad para uso en el informe final & 4 h & Alta \\ \hline
+
+HU10 & Redactar sección metodológica detallada sobre interpretabilidad y validación del modelo & 6 h & Alta \\ \hline
+HU10 & Documentar errores comunes, desviaciones y limitaciones técnicas del enfoque usado & 6 h & Alta \\ \hline
+HU10 & Organizar todos los resultados intermedios en un repositorio de evidencia (figuras, métricas, logs) & 4 h & Alta \\ \hline
+HU10 & Preparar anexos técnicos (tablas, configuraciones, parámetros de entrenamiento) & 4 h & Media \\ \hline
+HU10 & Escribir resumen ejecutivo de hallazgos clave para perfil no técnico & 4 h & Alta \\ \hline
+HU10 & Validar consistencia de resultados con al menos un reentrenamiento completo del pipeline & 6 h & Alta \\ \hline
+HU10 & Consolidar todas las visualizaciones y tablas en formato compatible con el trabajo final & 6 h & Alta \\ \hline
+HU10 & Revisión cruzada de los datos usados, modelos entrenados y outputs finales para garantizar trazabilidad & 4 h & Alta \\ \hline
+
+HU9 (Complementaria) & Explorar herramientas de explicabilidad adicionales (LIME, ELI5) y comparar resultados & 6 h & Baja \\ \hline
+HU9 (Opcional) & Generar dashboard interactivo de interpretabilidad usando SHAP o Plotly Dash & 6 h & Baja \\ \hline
+HU10 (Complementaria) & Crear checklist de calidad para evaluación reproducible del proyecto & 4 h & Media \\ \hline
+HU10 (Opcional) & Preparar versión resumida tipo “executive deck” para stakeholders empresariales & 4 h & Baja \\ \hline
+
+HU11 & Redactar documento técnico sobre el pipeline de preprocesamiento (paso a paso) & 4 h & Alta \\ \hline
+HU11 & Incluir justificación de decisiones de limpieza, codificación y normalización de variables & 4 h & Alta \\ \hline
+HU11 & Documentar criterios para selección de variables y eliminación de atributos redundantes & 4 h & Alta \\ \hline
+HU11 & Crear diagrama de flujo del pipeline de datos para incluir en el informe técnico & 4 h & Media \\ \hline
+
+HU12 & Configurar un repositorio de control de versiones (Git) con estructura organizada por módulos & 4 h & Alta \\ \hline
+HU12 & Registrar versiones clave de scripts de modelado y preprocesamiento (commits etiquetados) & 4 h & Media \\ \hline
+HU12 & Estandarizar nombre de archivos y estructuras de carpetas para reproducibilidad & 3 h & Media \\ \hline
+HU12 & Documentar cada experimento de entrenamiento en un log estructurado (fecha, modelo, métricas) & 3 h & Media \\ \hline
+
+HU13 & Redactar sección de introducción y justificación del proyecto & 4 h & Alta \\ \hline
+HU13 & Redactar el estado del arte y antecedentes técnicos con citas académicas & 5 h & Alta \\ \hline
+HU13 & Describir la metodología, incluyendo el enfoque CRISP-DM y diseño experimental & 4 h & Alta \\ \hline
+HU13 & Redactar sección de resultados con métricas, gráficas y análisis comparativo & 4 h & Alta \\ \hline
+HU13 & Redactar las conclusiones, recomendaciones y posibles líneas futuras de trabajo & 3 h & Alta \\ \hline
+
+HU14 & Adaptar el documento al formato oficial del posgrado (estructura, márgenes, tipografía) & 3 h & Alta \\ \hline
+HU14 & Revisar y corregir estilo, ortografía y redacción académica del documento completo & 4 h & Alta \\ \hline
+HU14 & Incorporar referencias en formato académico (BibTeX o APA) y verificar su consistencia & 3 h & Alta \\ \hline
+
+HU15 & Diseñar el esquema de la presentación (estructura narrativa y bloques temáticos) & 3 h & Alta \\ \hline
+HU15 & Crear diapositivas para la introducción, problema y contexto del proyecto & 4 h & Alta \\ \hline
+HU15 & Elaborar visualizaciones para explicar la metodología y modelos aplicados & 4 h & Alta \\ \hline
+HU15 & Incluir resultados clave, métricas, interpretabilidad y conclusiones en formato visual & 4 h & Alta \\ \hline
+HU15 & Revisar estilo gráfico, legibilidad, formato y duración estimada de la presentación & 2 h & Alta \\ \hline
+
+HU16 & Preparar guion detallado para la exposición oral (con tiempos por sección) & 3 h & Media \\ \hline
+HU16 & Realizar al menos dos ensayos de defensa con cronómetro y grabación propia & 4 h & Media \\ \hline
+HU16 & Practicar respuestas a posibles preguntas técnicas y de evaluación crítica & 3 h & Media \\ \hline
+HU16 & Ajustar discurso, transiciones y tiempos en función de los ensayos & 3 h & Media \\ \hline
+
 \end{tabularx}
 \end{table}
 
