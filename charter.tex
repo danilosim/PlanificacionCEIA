@@ -121,7 +121,7 @@ Este doble enfoque con distintas capas de análisis permitirá no solo detectar 
 
 \subsection*{Contexto y condiciones particulares del proyecto}
 
-Este proyecto se desarrollará en estrecha colaboración con el equipo de datos de Built Technologies. Se cuenta con acceso autorizado a un dataset anonimizado que incluye información detallada de más de 10 años de historial de proyectos, con datos por rubro presupuestario, tipo de préstamo, ubicación, resultados de ejecución y características del contratista y del proveedor. Por cuestiones de privacidad y cumplimiento normativo (SOC 2 y GDPR), los datos no contienen información sensible de clientes, y el trabajo se limita exclusivamente a información estructurada, descartando el uso de documentos escaneados o imágenes.
+Este proyecto se desarrollará en estrecha colaboración con el equipo de datos de Built Technologies. Se cuenta con acceso autorizado a un dataset anonimizado que incluye información detallada de más de 10 años de historial de proyectos, con datos por rubro presupuestario, tipo de préstamo, ubicación, resultados de ejecución y características del contratista y del proveedor. Por cuestiones de privacidad y cumplimiento normativo (SOC 2 y GDPR), los datos no contienen información sensible de clientes, y el trabajo se limita exclusivamente a información estructurada, sin el uso de documentos escaneados o imágenes.
 
 \subsection*{Estado del arte y diferenciación de la solución}
 
@@ -131,19 +131,19 @@ La mayoría de las soluciones actuales en el sector se apoyan en heurísticas ba
 
 La regresión multivariada ha sido un enfoque base para estimar costos de construcción. Estos modelos asumen relaciones lineales entre los factores (como tamaño de la obra, calidad de los materiales, etc.) y el costo total. En escenarios relativamente simples, las regresiones pueden brindar estimaciones razonables: típicamente logran una precisión del orden de 75 \%-80 \%. No obstante, en la mayoría de proyectos existen relaciones no lineales y dependencias complejas entre variables (economías de escala, influencias del mercado, interacciones entre diseño y método constructivo) que limitan la capacidad predictiva.
 
-También se ha explorado la utilización de otro tipo de modelos como Random Forest y XGBoost. Estos enfoques han mostrado mejoras significativas en precisión frente a métodos tradicionales. Por ejemplo, un estudio recopiló datos de 95 proyectos de edificios y implementó un modelo de Random Forest para predecir riesgos de sobrecostos. Otro ejemplo relevante es un trabajo que utiliza XGBoost para seleccionar las variables más influyentes y estimar el costo de proyectos de edificación.
+También se ha explorado la utilización de otro tipo de modelos como \textit{Random Forest} y \textit{XGBoost}. Estos enfoques han mostrado mejoras significativas en precisión frente a métodos tradicionales. Por ejemplo, un estudio recopiló datos de 95 proyectos de edificios y implementó un modelo de \textit{Random Forest} para predecir riesgos de sobrecostos. Otro ejemplo relevante es un trabajo que utiliza \textit{XGBoost} para seleccionar las variables más influyentes y estimar el costo de proyectos de edificación.
 
-En otros casos, se ha explorado la posibilidad de utilizar modelos de deep learning para estimación de costos en el desarrollo de proyectos. Algunas investigaciones han resultado en precisiones del 85 \%-90 \%, superior a la obtenida por modelos más simples. Esto se traduce en menores errores de predicción para proyectos complejos, aunque a costa de una mayor demanda de datos y capacidad computacional.
+En otros casos, se ha explorado la posibilidad de utilizar modelos de \textit{deep learning} para estimación de costos en el desarrollo de proyectos. Algunas investigaciones han resultado en precisiones del 85 \%-90 \%, superior a la obtenida por modelos más simples. Esto se traduce en menores errores de predicción para proyectos complejos, aunque a costa de una mayor demanda de datos y capacidad computacional.
 
 Al leer los resultados de dichos proyectos, se puede apreciar que las variables de mayor influencia son la escala del proyecto (metros cuadrados construídos, número de plantas), funcionalidad (edificio residencial, comercial, salud, etc.), así como especificaciones técnicas principales (tipo de climatización, sistema estructural, acaados exteriores e interiores, presencia de elementos especiales como ascensores, etc.), ubicación geográfica, año o época de construcción y tipo de contrato, entre otros.
 
 
 La solución propuesta se diferencia en que:
 \begin{itemize}
-    \item Utiliza modelos de aprendizaje supervisado entrenados sobre datos reales de ejecución y financiamiento, ajustando las predicciones al comportamiento histórico.
-    \item Integra múltiples variables categóricas y numéricas, como ubicación geográfica, superficie construida, tipo de contratista y composición del presupuesto, ofreciendo una predicción contextualizada.
+    \item Utiliza modelos de aprendizaje supervisado entrenados sobre datos reales de ejecución y financiamiento, con ajuste de las predicciones al comportamiento histórico.
+    \item Integra múltiples variables categóricas y numéricas, como ubicación geográfica, superficie construida, tipo de contratista y composición del presupuesto, con una predicción contextualizada.
     \item Utiliza un volumen de datos mayor a los proyectos realizados hasta el momento.
-    \item Incorpora técnicas de explicabilidad como SHAP (Shapley Additive Explanations) para interpretar por qué el modelo predice insuficiencia o sobrecosto, facilitando su adopción por parte de analistas humanos.
+    \item Incorpora técnicas de explicabilidad como SHAP (Shapley Additive Explanations) para interpretar por qué el modelo predice insuficiencia o sobrecosto, con adopción por parte de analistas humanos.
     \item Ofrece tanto una salida binaria (¿es suficiente el préstamo?) como una salida regresiva multirrubro (estimación de costos por partida).
 \end{itemize}
 
@@ -152,9 +152,9 @@ La solución propuesta se diferencia en que:
 La implementación de este sistema generará múltiples beneficios para Built Technologies y sus socios financieros:
 
 \begin{itemize}
-    \item Reducir el porcentaje de proyectos con préstamos insuficientes, disminuyendo renegociaciones y sobrecostos.
-    \item Mejorar la eficiencia del análisis crediticio, apoyando a los analistas con una herramienta predictiva basada en datos.
-    \item Aumentar la satisfacción del cliente final, evitando interrupciones en la ejecución del proyecto por errores de estimación.
+    \item Reducir el porcentaje de proyectos con préstamos insuficientes y así lograr evitar renegociaciones y sobrecostos.
+    \item Mejorar la eficiencia del análisis crediticio, donde los analistas cuentan con una herramienta predictiva basada en datos.
+    \item Aumentar la satisfacción del cliente final, sin interrupciones en la ejecución del proyecto por errores de estimación.
     \item Detectar patrones de subestimación crónica en ciertos rubros o regiones, lo que podría informar futuras políticas de originación de préstamos.
 \end{itemize}
 
@@ -169,10 +169,10 @@ La solución se compone de los siguientes bloques funcionales:
     \item \textbf{Módulo de procesamiento de datos}: limpieza, transformación y validación de los datos históricos estructurados.
     \item \textbf{Módulo de entrenamiento}: entrenamiento de dos modelos: uno de clasificación binaria (suficiencia del préstamo) y otro de regresión multirrubro (predicción de costos por partida).
     \item \textbf{Módulo de inferencia}: dado un nuevo proyecto con sus características, el sistema entrega predicciones de suficiencia y una tabla con los valores esperados por rubro presupuestario.
-    \item \textbf{Módulo de visualización}: presenta los resultados a través de gráficos, tablas y explicaciones interpretables, facilitando el uso por parte del equipo financiero.
+    \item \textbf{Módulo de visualización}: presenta los resultados a través de gráficos, tablas y explicaciones interpretables para el uso por parte del equipo financiero.
 \end{itemize}
 
-En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa el flujo de datos desde la base histórica, pasando por las etapas de preprocesamiento, entrenamiento e inferencia, hasta la visualización de resultados por parte del analista financiero.
+En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa el flujo de datos desde la base histórica, las etapas de preprocesamiento, entrenamiento e inferencia, hasta la visualización de resultados por parte del analista financiero.
 
 \begin{figure}[htpb]
 \centering 
@@ -210,7 +210,7 @@ Usuario final & -                 & Clientes de Built 	 & - \\ \hline
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-Desarrollar una solución basada en modelos de aprendizaje automático que permita asistir a los analistas financieros de Built Technologies en la evaluación de la suficiencia de préstamos otorgados para proyectos de construcción. Dicha solución deberá orientar en la estimación detallada de los costos asociados a cada una de las partidas presupuestarias. La solución busca anticipar riesgos de subfinanciamiento y sobrecostos mediante el análisis de datos históricos anonimizados, promoviendo decisiones más informadas, eficientes y escalables dentro del flujo de originación de créditos.
+Desarrollar una solución basada en modelos de aprendizaje automático que permita asistir a los analistas financieros de Built Technologies en la evaluación de la suficiencia de préstamos otorgados para proyectos de construcción. Dicha solución deberá orientar en la estimación detallada de los costos asociados a cada una de las partidas presupuestarias. La solución busca anticipar riesgos de subfinanciamiento y sobrecostos mediante el análisis de datos históricos anonimizados. Esto produce decisiones más informadas, eficientes y escalables dentro del flujo de originación de créditos.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
@@ -232,8 +232,8 @@ El presente proyecto incluye:
         \item Un modelo de clasificación binaria para predecir si el préstamo solicitado es suficiente para cubrir el presupuesto total.
         \item Un modelo de regresión multivariada para estimar los costos esperados por categoría presupuestaria (por ejemplo: cimentación, electricidad, techado, etc.).
     \end{itemize}
-    \item Evaluación de los modelos desarrollados mediante métricas adecuadas (F1-score, AUC-ROC, MAE, RMSE).
-    \item Generación de explicaciones interpretables de las predicciones usando técnicas como SHAP o Feature Importance.
+    \item Evaluación de los modelos desarrollados mediante métricas adecuadas (\textit{F1-score}, \textit{AUC-ROC}, \textit{MAE}, \textit{RMSE}).
+    \item Generación de explicaciones interpretables de las predicciones con técnicas como \textit{SHAP} o \textit{Feature Importance}.
     \item Documentación del proceso completo y presentación de los resultados en un formato replicable y académico.
 \end{itemize}
 
@@ -266,10 +266,10 @@ Para el desarrollo del presente proyecto se supone que:
 \section{6. Product Backlog}
 \label{sec:backlog}
 
-El criterio utilizado para asignar los Story Points se basa en una escala relativa de complejidad, esfuerzo y riesgo:
+El criterio utilizado para asignar los \textit{Story Points} se basa en una escala relativa de complejidad, esfuerzo y riesgo:
 \begin{itemize}
   \item 1 punto: tarea simple, conocida, sin incertidumbre técnica.
-  \item 2–3 puntos: tarea con algo de procesamiento o exploración de datos.
+  \item 2–3 puntos: tarea con un nivel medio de procesamiento o exploración de datos.
   \item 5 puntos: tarea técnica de mediana complejidad o con validaciones múltiples.
   \item 8+ puntos: tarea compleja o con alto nivel de incertidumbre en datos o rendimiento del modelo.
 \end{itemize}
@@ -277,16 +277,16 @@ El criterio utilizado para asignar los Story Points se basa en una escala relati
 A continuación, se detallan las épicas y sus respectivas historias de usuario:
 
 \begin{itemize}
-  \item \textbf{Épica 1: Relevamiento y análisis de datos históricos}
+  \item \textbf{Épica 1: relevamiento y análisis de datos históricos}
     \begin{itemize}
-      \item \textbf{HU1:} Como analista de datos, quiero explorar y limpiar el dataset histórico para asegurar que los datos sean utilizables para modelado.  
+      \item \textbf{HU1:} Como analista de datos, quiero explorar y limpiar el \textit{dataset} histórico para asegurar que los datos sean utilizables para modelado.  
       \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 3}
       
       \item \textbf{HU2:} Como ingeniero de datos, quiero identificar las variables más relevantes para el análisis, clasificándolas según tipo y calidad.  
       \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 3}
     \end{itemize}
 
-  \item \textbf{Épica 2: Preprocesamiento y preparación de datos}
+  \item \textbf{Épica 2: preprocesamiento y preparación de datos}
     \begin{itemize}
       \item \textbf{HU3:} Como científico de datos, quiero balancear las clases de la variable objetivo para asegurar un entrenamiento adecuado del modelo de clasificación.  
       \newline \textbf{Prioridad: Media} — \textbf{Story Points: 5}
@@ -295,18 +295,18 @@ A continuación, se detallan las épicas y sus respectivas historias de usuario:
       \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 3}
     \end{itemize}
 
-  \item \textbf{Épica 3: Entrenamiento y validación de modelos}
+  \item \textbf{Épica 3: entrenamiento y validación de modelos}
     \begin{itemize}
-      \item \textbf{HU5:} Como desarrollador de modelos, quiero entrenar un modelo de clasificación para predecir si el préstamo es suficiente, y evaluar su rendimiento con métricas como F1-score y AUC.  
+      \item \textbf{HU5:} Como desarrollador de modelos, quiero entrenar un modelo de clasificación para predecir si los presupuestos cumplen con su objetivo, y evaluar su rendimiento con métricas como \textit{F1-score} y \textit{AUC}.  
       \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 5}
 
-      \item \textbf{HU6:} Como desarrollador de modelos, quiero entrenar un modelo de regresión para estimar los costos por partida presupuestaria, y analizar su precisión mediante MAE y RMSE.  
+      \item \textbf{HU6:} Como desarrollador de modelos, quiero entrenar un modelo de regresión para estimar los costos por partida presupuestaria, y analizar su precisión mediante \textit{MAE} y \textit{RMSE}.  
       \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 5}
     \end{itemize}
 
-  \item \textbf{Épica 4: Interpretación, documentación y validación}
+  \item \textbf{Épica 4: interpretación, documentación y validación}
     \begin{itemize}
-      \item \textbf{HU7:} Como analista, quiero aplicar técnicas de interpretabilidad (SHAP, Feature Importance) para entender las variables que más influyen en las predicciones.  
+      \item \textbf{HU7:} Como analista, quiero aplicar técnicas de interpretabilidad (\textit{SHAP}, \textit{Feature Importance}) para entender las variables que más influyen en las predicciones.  
       \newline \textbf{Prioridad: Media} — \textbf{Story Points: 3}
 
       \item \textbf{HU8:} Como responsable del proyecto, quiero documentar el proceso, los resultados y sus limitaciones para facilitar su presentación y revisión académica.  
@@ -318,7 +318,7 @@ A continuación, se detallan las épicas y sus respectivas historias de usuario:
 \label{sec:criteriosAceptacion}
 
 \begin{itemize}
-  \item \textbf{Épica 1: Relevamiento y análisis de datos históricos}
+  \item \textbf{Épica 1: relevamiento y análisis de datos históricos}
     \begin{itemize}
       \item \textbf{Criterios de aceptación HU1}
       \begin{itemize}
@@ -328,50 +328,50 @@ A continuación, se detallan las épicas y sus respectivas historias de usuario:
       \end{itemize}
       \item \textbf{Criterios de aceptación HU2}
       \begin{itemize}
-        \item Se ha identificado al menos un conjunto de 10 variables relevantes para predicción.
+        \item Se ha identificado el conjunto de variables relevantes para el modelo.
         \item Las variables han sido clasificadas como numéricas o categóricas.
         \item Se documentó la justificación técnica de la selección de cada variable.
       \end{itemize}
     \end{itemize}
 
-  \item \textbf{Épica 2: Preprocesamiento y preparación de datos}
+  \item \textbf{Épica 2: preprocesamiento y preparación de datos}
     \begin{itemize}
       \item \textbf{Criterios de aceptación HU3}
       \begin{itemize}
         \item Se analizó la distribución de la variable objetivo y se detectó desbalance significativo (si aplica).
-        \item Se aplicó una técnica de balanceo (undersampling, oversampling o SMOTE).
+        \item Se aplicó una técnica de balanceo (\textit{undersampling}, \textit{oversampling} o \textit{SMOTE}).
         \item Se verificó que el modelo no pierda precisión tras aplicar balanceo.
       \end{itemize}
       \item \textbf{Criterios de aceptación HU4}
       \begin{itemize}
-        \item Todas las variables categóricas han sido codificadas mediante one-hot encoding o similar.
+        \item Todas las variables categóricas han sido codificadas mediante \textit{one-hot encoding} o similar.
         \item Las variables numéricas fueron normalizadas o estandarizadas.
         \item El conjunto de datos final está listo para ser consumido por los modelos.
       \end{itemize}
     \end{itemize}
 
-  \item \textbf{Épica 3: Entrenamiento y validación de modelos}
+  \item \textbf{Épica 3: entrenamiento y validación de modelos}
     \begin{itemize}
       \item \textbf{Criterios de aceptación HU5}
       \begin{itemize}
         \item El modelo de clasificación fue entrenado con un conjunto dividido en entrenamiento, validación y prueba.
-        \item Se reportan métricas F1-score y AUC en el conjunto de prueba.
-        \item Se alcanza un F1-score mayor al 0.70 o el valor base definido como mínimo aceptable.
+        \item Se reportan métricas \textit{F1-score} y \textit{AUC} en el conjunto de prueba.
+        \item Se alcanza un \textit{F1-score} mayor al valor base definido como mínimo aceptable.
       \end{itemize}
       \item \textbf{Criterios de aceptación HU6}
       \begin{itemize}
         \item Se ha entrenado un modelo de regresión con variables de entrada preprocesadas.
-        \item Se calculan métricas MAE, RMSE y R² sobre el conjunto de prueba.
-        \item El modelo logra un R² superior a 0.80 y un MAE dentro del umbral definido según el negocio.
+        \item Se calculan métricas \textit{MAE}, \textit{RMSE} y \textit{R²} sobre el conjunto de prueba.
+        \item El modelo logra un \textit{MAE} dentro del umbral definido según el negocio.
       \end{itemize}
     \end{itemize}
 
-  \item \textbf{Épica 4: Interpretación, documentación y validación}
+  \item \textbf{Épica 4: interpretación, documentación y validación}
     \begin{itemize}
       \item \textbf{Criterios de aceptación HU7}
       \begin{itemize}
-        \item Se aplicó una técnica de explicabilidad (ej. SHAP) sobre los modelos entrenados.
-        \item Se identificaron las 5 variables más influyentes en las predicciones.
+        \item Se aplicó una técnica de explicabilidad (ej. \textit{SHAP}) sobre los modelos entrenados.
+        \item Se identificaron las variables más influyentes en las predicciones.
         \item Los resultados de interpretabilidad se incluyen en un informe gráfico y textual.
       \end{itemize}
       \item \textbf{Criterios de aceptación HU8}
@@ -393,52 +393,52 @@ A continuación, se detallan las épicas y sus respectivas historias de usuario:
     \item Predecir el costo esperado por categoría presupuestaria (materiales, mano de obra, cimentación, etc.).
   \end{itemize}
   El valor agregado de incorporar IA radica en anticipar riesgos de subfinanciamiento y sobrecostos desde etapas tempranas del proceso crediticio.  
-  \textbf{Métricas de éxito:} precisión del modelo (F1-score y AUC para clasificación, MAE y R² para regresión), interpretabilidad y aplicabilidad práctica para el analista.
+  \textbf{Métricas de éxito:} precisión del modelo (\textit{F1-score} y \textit{AUC} para clasificación, \textit{MAE} y \textit{R²} para regresión), interpretabilidad y aplicabilidad práctica para el analista.
 
   \item \textbf{Comprensión de los datos:}  
   El dataset proviene de registros históricos anonimizados de Built Technologies, con más de 10 años de datos sobre proyectos financiados.  
   \begin{itemize}
     \item \textbf{Tipo:} datos estructurados tabulares, con variables numéricas y categóricas.
     \item \textbf{Origen:} base interna de proyectos y préstamos otorgados.
-    \item \textbf{Cantidad:} cientos a miles de registros, cada uno con más de 30 variables.
-    \item \textbf{Calidad:} en general buena, pero con presencia de valores faltantes, codificación inconsistente de categorías y posibles outliers.
+    \item \textbf{Cantidad:} en el orden de los millones de registros.
+    \item \textbf{Calidad:} excelente, pero con presencia de valores faltantes, codificación inconsistente de categorías y posibles \textit{outliers}.
   \end{itemize}
 
   \item \textbf{Preparación de los datos:}  
-  Esta etapa incluye limpieza y transformación del dataset para su uso por los modelos:
+  Esta etapa incluye limpieza y transformación del \textit{dataset} para su uso por los modelos:
   \begin{itemize}
     \item Eliminación de registros con errores evidentes o duplicados.
     \item Tratamiento de valores nulos mediante imputación o eliminación.
-    \item Codificación de variables categóricas (one-hot encoding).
+    \item Codificación de variables categóricas (\textit{one-hot encoding}).
     \item Normalización y estandarización de variables numéricas.
     \item Balanceo de clases para la variable objetivo en el modelo de clasificación.
-    \item Selección de variables relevantes mediante análisis exploratorio y técnicas automáticas (feature importance, selección recursiva).
+    \item Selección de variables relevantes mediante análisis exploratorio y técnicas automáticas (\textit{feature importance}, selección recursiva).
   \end{itemize}
 
   \item \textbf{Modelado:}  
   Se abordan dos problemas distintos:
   \begin{itemize}
-    \item \textbf{Clasificación binaria:} predecir si el préstamo será suficiente.
+    \item \textbf{Probabilidad de completitud:} predecir si el préstamo será suficiente para cubrir los costos.
     \item \textbf{Regresión multivariada:} estimar el costo por partida presupuestaria.
   \end{itemize}
   Los algoritmos candidatos incluyen:
   \begin{itemize}
-    \item \textbf{Para clasificación:} Random Forest, XGBoost, Regresión Logística.
-    \item \textbf{Para regresión:} XGBoost Regressor, LightGBM, redes neuronales densas.
+    \item \textbf{Para clasificación:} \textit{Random Forest}, \textit{XGBoost}, Regresión Logística.
+    \item \textbf{Para regresión:} \textit{XGBoost Regressor}, \textit{LightGBM}, redes neuronales densas.
   \end{itemize}
   Se compararán diferentes modelos y se realizará validación cruzada.
 
   \item \textbf{Evaluación del modelo:}  
   Se utilizarán diferentes métricas de rendimiento por tipo de modelo:
   \begin{itemize}
-    \item \textbf{Clasificación:} F1-score, precisión, recall, AUC-ROC.
-    \item \textbf{Regresión:} MAE (error absoluto medio), RMSE (raíz del error cuadrático medio), R².
+    \item \textbf{Clasificación:} \textit{F1-score}, precisión, \textit{recall}, \textit{AUC-ROC}.
+    \item \textbf{Regresión:} \textit{MAE} (error absoluto medio), \textit{RMSE} (raíz del error cuadrático medio), \textit{R²}.
   \end{itemize}
-  Además, se aplicarán técnicas de interpretabilidad (SHAP, feature importance) para validar que los modelos son comprensibles para usuarios no técnicos.
+  Además, se aplicarán técnicas de interpretabilidad (\textit{SHAP}, \textit{feature importance}) para validar que los modelos son comprensibles para usuarios no técnicos.
 
   \item \textbf{Despliegue del modelo (opcional):}  
-  Dado que el proyecto es académico, no se contempla un despliegue productivo.  
-  No obstante, se documentará cómo podría integrarse el modelo en un pipeline de análisis crediticio dentro de Built Technologies, incluyendo:
+  Dado que el proyecto es académico, no se contempla un despliegue a producción.  
+  No obstante, se documentará cómo podría integrarse el modelo en un pipeline de análisis crediticio dentro de Built Technologies:
   \begin{itemize}
     \item Exportación del modelo entrenado en formato compatible (.pkl, .joblib).
     \item Sugerencia de integración vía API REST o servicio batch interno.
@@ -451,13 +451,13 @@ A continuación, se detallan las épicas y sus respectivas historias de usuario:
 
 El siguiente desglose de tareas se realizó a partir de las historias de usuario definidas en el Product Backlog. Cada tarea fue especificada de manera técnica, concreta y medible, con el fin de facilitar la posterior planificación en sprints y la elaboración del diagrama de Gantt.
 
-La estimación en horas se basa en una evaluación del grado de dificultad técnica, la complejidad algorítmica involucrada, la posible necesidad de investigación exploratoria, y el nivel de incertidumbre asociado a cada actividad. En todos los casos se evitó la subestimación, manteniendo un rango de entre 2 y 8 horas por tarea. Las tareas que excedían dicho umbral fueron fraccionadas para asegurar mayor control en la gestión del tiempo.
+La estimación en horas se basa en una evaluación del grado de dificultad técnica, la complejidad algorítmica involucrada, la posible necesidad de investigación exploratoria, y el nivel de incertidumbre asociado a cada actividad.
 
 A su vez, cada tarea ha sido asignada una prioridad relativa (Alta, Media o Baja) en función de su impacto en el cumplimiento de los criterios de aceptación, su relevancia en el ciclo de vida del modelo y su efecto habilitador sobre otras tareas posteriores.
 
 \begin{table}[htpb]
 \centering
-\begin{tabularx}{\linewidth}{@{}|X|X|c|c|@{}}
+\begin{tabularx}{\linewidth}{@{}|c|X|c|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0}
 Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
@@ -486,46 +486,6 @@ HU7 & Generar visualizaciones e interpretación de variables más influyentes & 
 HU8 & Redactar documentación técnica del pipeline y decisiones de modelado & 6 h & Alta \\ \hline
 HU8 & Elaborar informe académico con gráficos, métricas y justificación del enfoque & 6 h & Alta \\ \hline
 
-\end{tabularx}
-\end{table}
-
-Este desglose representa una estimación aproximada de 94 horas efectivas, cubriendo las tareas fundamentales asociadas a la construcción del modelo, la validación técnica y la documentación final. A lo largo del desarrollo del proyecto, se podrá ajustar el detalle de tareas, subdividir algunas de mayor complejidad o incorporar tareas adicionales en función de descubrimientos o desafíos surgidos en fases intermedias.
-
-Este enfoque estructurado garantiza la trazabilidad del avance y facilitará una gestión iterativa del trabajo a lo largo de los sprints definidos en la planificación.
-
-\begin{table}[htpb]
-\centering
-\begin{tabularx}{\linewidth}{@{}|X|X|c|c|@{}}
-\hline
-\rowcolor[HTML]{C0C0C0}
-Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
-
-% TAREAS PRINCIPALES (como antes)
-HU1 & Cargar y validar la estructura del dataset histórico en entorno Python (pandas) & 6 h & Alta \\ \hline
-HU1 & Realizar análisis exploratorio (EDA) con estadísticas y gráficos de distribución & 8 h & Alta \\ \hline
-
-HU2 & Clasificar variables por tipo y relevancia técnica (numéricas, categóricas, target) & 5 h & Media \\ \hline
-HU2 & Documentar variables clave e identificar posibles correlaciones redundantes & 6 h & Alta \\ \hline
-
-HU3 & Analizar distribución de clases de la variable objetivo (préstamo suficiente) & 4 h & Media \\ \hline
-HU3 & Implementar técnica de balanceo (SMOTE o submuestreo) y validar resultados & 6 h & Alta \\ \hline
-
-HU4 & Codificar variables categóricas con one-hot encoding & 4 h & Alta \\ \hline
-HU4 & Normalizar y/o estandarizar variables numéricas & 4 h & Alta \\ \hline
-
-HU5 & Implementar modelo de clasificación (Random Forest o XGBoost) & 6 h & Alta \\ \hline
-HU5 & Evaluar modelo con F1-score y curva ROC; ajustar hiperparámetros básicos & 6 h & Alta \\ \hline
-
-HU6 & Entrenar modelo de regresión multivariada (XGBoost Regressor) & 6 h & Alta \\ \hline
-HU6 & Evaluar modelo con MAE, RMSE y R² en datos de test & 6 h & Alta \\ \hline
-
-HU7 & Aplicar técnica de interpretabilidad (SHAP o Feature Importance) & 5 h & Media \\ \hline
-HU7 & Generar visualizaciones e interpretación de variables más influyentes & 5 h & Media \\ \hline
-
-HU8 & Redactar documentación técnica del pipeline y decisiones de modelado & 6 h & Alta \\ \hline
-HU8 & Elaborar informe académico con gráficos, métricas y justificación del enfoque & 6 h & Alta \\ \hline
-
-% TAREAS OPCIONALES / COMPLEMENTARIAS
 HU5 (Opcional) & Comparar el modelo de clasificación con una regresión logística base & 5 h & Baja \\ \hline
 HU6 (Opcional) & Entrenar modelo alternativo de regresión (p. ej. LightGBM o redes neuronales) & 6 h & Baja \\ \hline
 HU3 (Complementaria) & Aplicar técnicas de reducción de dimensionalidad (PCA) y analizar impacto & 5 h & Media \\ \hline
@@ -533,6 +493,10 @@ HU7 (Complementaria) & Evaluar sensibilidad de predicciones ante cambios simulad
 HU8 (Opcional) & Preparar presentación tipo pitch técnico para stakeholders internos (no académica) & 4 h & Baja \\ \hline
 \end{tabularx}
 \end{table}
+
+Este desglose representa una estimación aproximada de 94 horas efectivas, donde se cubren las tareas fundamentales asociadas a la construcción del modelo, la validación técnica y la documentación final. A lo largo del desarrollo del proyecto, se podrá ajustar el detalle de tareas, subdividir algunas de mayor complejidad o incorporar tareas adicionales en función de descubrimientos o desafíos surgidos en fases intermedias.
+
+Este enfoque estructurado garantiza la trazabilidad del avance y facilitará una gestión iterativa del trabajo a lo largo de los sprints definidos en la planificación.
 
 \section{10. Diagrama de Gantt}
 \label{sec:gantt}
