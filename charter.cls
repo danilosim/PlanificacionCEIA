@@ -12,8 +12,6 @@
 \RequirePackage{etoolbox}
 \RequirePackage{xparse}
 
-\newbool{codirector}
-
 \ProvidesClass{charter}
 \DeclareOption*{\PassOptionsToPackage{\CurrentOption}{color}}%
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}%
@@ -30,8 +28,6 @@
 \def\ttitle{}
 \newcommand*{\director}[1]{\def\supname{#1}}
 \newcommand*{\pertenenciaDirector}[1]{\def\pertesupname{#1}}
-\newcommand*{\codirector}[1]{\def\cosupname{#1}}
-\newcommand*{\pertenenciaCoDirector}[1]{\def\pertecosupname{#1}}
 \newcommand*{\cliente}[1]{\def\clientename{#1}}
 \newcommand*{\empresaCliente}[1]{\def\empclientename{#1}}
 \newcommand*{\titulo}[1]{\def\@title{#1}\def\ttitle{#1}}
@@ -198,22 +194,13 @@
 	{\normalsize Director:\\}
 	{\Large \supname \hspace{1px} (\pertesupname) \\}
 
-\ifdefempty{\cosupname}
-  % codirector doesn't exist
-  {
-    \vspace{2pc}
-  }
-  % codirector exists
-  {
-    \vspace{10px}
-    \normalsize Codirector:\\
-    \Large \cosupname \hspace{1px} (\pertecosupname) \\
-  }
-		
-	
-    \vfill
-    \centering
-    \textit{Esta planificación fue realizada en el curso de Gestión de proyectos\\ entre el \fechaInicioName \hspace{1px} y el  \fechaFinalPlanName.}
+
+  \vspace{2pc}
+  
+
+  \vfill
+  \centering
+  \textit{Esta planificación fue realizada en el curso de Gestión de proyectos\\ entre el \fechaInicioName \hspace{1px} y el  \fechaFinalPlanName.}
 		
 	\pagebreak
   }
