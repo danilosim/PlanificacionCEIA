@@ -2,6 +2,8 @@
 \documentclass[
 11pt, % The default document font size, options: 10pt, 11pt, 12pt
 ]{charter} 
+% Paquete para diagramas de Gantt en LaTeX
+\usepackage{pgfgantt}
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
@@ -765,35 +767,62 @@ Este desglose representa una estimación aproximada de 600 horas efectivas, dond
 
 Este enfoque estructurado garantiza la trazabilidad del avance y facilitará una gestión iterativa del trabajo a lo largo de los sprints definidos en la planificación.
 
+% --- Diagrama de Gantt ---
 \section{10. Diagrama de Gantt}
 \label{sec:gantt}
 
-El diagrama de Gantt debe representar de forma visual y cronológica todas las tareas del proyecto, abarcando aproximadamente 600 horas totales, de las cuales entre 480 y 500 deben destinarse a tareas técnicas (desarrollo, pruebas, implementación) y entre 100 y 120 a tareas no técnicas (planificación, documentación, escritura de memoria y preparación de la defensa).
+\begin{figure}[htpb]
+\centering
+\begin{ganttchart}[
+    hgrid,
+    vgrid,
+    time slot format=isodate,
+    compress calendar,
+    x unit=0.7cm,
+    milestone label anchor/.style={below=3pt},
+    bar height=0.6,
+    group label font=\bfseries,
+    bar label font=\small\rmfamily,
+    milestone label font=\small\rmfamily\itshape,
+    title/.append style={draw=none, fill=gray!10},
+    title label font=\bfseries\footnotesize,
+    title label anchor/.style={below=-1.6ex}
+]{2025-04-29}{2025-11-30}
+\gantttitlecalendar{year, month=name} \\
 
-\textbf{Consignas y recomendaciones:}
-\begin{itemize}
-  \item Incluir tanto tareas técnicas derivadas de las HU como tareas no técnicas generales del proyecto.
-  \item El eje vertical debe listar las tareas y el eje horizontal representar el tiempo en semanas o fechas.
-  \item Utilizar colores diferenciados para distinguir tareas técnicas y no técnicas.
-  \item Las tareas deben estar ordenadas cronológicamente y reflejar todo el ciclo del proyecto.
-  \item Iniciar con la planificación del proyecto (coincidente con el inicio de Gestión de Proyectos) y finalizar con la defensa, próxima a la fecha de cierre del trabajo.
-  \item Configurar el software para mostrar los códigos del desglose de tareas y los nombres junto a cada barra.
-  \item Asegurarse de que la fecha final coincida con la del Acta Constitutiva.
-  \item Evitar tareas genéricas o ambiguas y asegurar una secuencia lógica y realista.
-  \item Las fechas pueden ser aproximadas; ajustar el ancho del diagrama según el texto y el parámetro \texttt{x unit}. Para mejorar la apariencia del diagrama, es necesario ajustar este valor y, quizás, acortar los nombres de las tareas.
-\end{itemize}
+\ganttgroup{Planificación inicial}{2025-04-29}{2025-05-15} \\
+\ganttbar{Definición de cronograma y backlog}{2025-04-29}{2025-05-10} \\
+\ganttbar{Ajustes y validaciones con tutor}{2025-05-11}{2025-05-15} \\
 
-\textbf{Herramientas sugeridas:}
-\begin{itemize}
-  \item Planner, GanttProject, Trello + plugins\\
-  \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-  \item Creately (colaborativa online)\\
-  \url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-  \item LaTeX con \texttt{pgfgantt}:\\
-  \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
+\ganttgroup{Relevamiento y análisis de datos}{2025-05-16}{2025-06-30} \\
+\ganttbar{Carga, limpieza y análisis exploratorio}{2025-05-16}{2025-06-05} \\
+\ganttbar{Selección de variables y justificación}{2025-06-06}{2025-06-30} \\
 
-Incluir una imagen legible del diagrama de Gantt. Si es muy ancho, presentar primero la tabla y luego el gráfico de barras.
+\ganttgroup{Preprocesamiento de datos}{2025-07-01}{2025-07-31} \\
+\ganttbar{Codificación y normalización}{2025-07-01}{2025-07-15} \\
+\ganttbar{Balanceo de clases y validación del pipeline}{2025-07-16}{2025-07-31} \\
+
+\ganttgroup{Entrenamiento de modelos}{2025-08-01}{2025-08-31} \\
+\ganttbar{Modelo de clasificación}{2025-08-01}{2025-08-15} \\
+\ganttbar{Modelo de regresión}{2025-08-16}{2025-08-31} \\
+
+\ganttgroup{Interpretación y documentación}{2025-09-01}{2025-09-30} \\
+\ganttbar{Aplicación de SHAP y análisis}{2025-09-01}{2025-09-15} \\
+\ganttbar{Documentación técnica y visualizaciones}{2025-09-16}{2025-09-30} \\
+
+\ganttgroup{Redacción de la memoria}{2025-10-01}{2025-10-31} \\
+\ganttbar{Escritura de secciones y resultados}{2025-10-01}{2025-10-20} \\
+\ganttbar{Formato y revisión académica}{2025-10-21}{2025-10-31} \\
+
+\ganttgroup{Preparación defensa oral}{2025-11-01}{2025-11-29} \\
+\ganttbar{Diseño de presentación}{2025-11-01}{2025-11-15} \\
+\ganttbar{Ensayos y ajustes finales}{2025-11-16}{2025-11-29} \\
+\ganttmilestone{Defensa final}{2025-11-30}
+
+\end{ganttchart}
+\caption{Diagrama de Gantt del proyecto.}
+\label{fig:gantt}
+\end{figure}
 
 \section{11. Planificación de Sprints}
 
