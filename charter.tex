@@ -19,8 +19,10 @@
 \autor{Ing. Danilo Simón Reitano Andrades}
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Dr. Ing. Hernán Garrido}
-\pertenenciaDirector{Prof. Titular – FING, UNCUYO}
+% \director{Dr. Ing. Hernán Garrido}
+% \pertenenciaDirector{Prof. Titular – FING, UNCUYO}
+\director{A definir}
+\pertenenciaDirector{A definir}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
 \cliente{Martin Brambati}
@@ -58,7 +60,7 @@
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                & 12 de mayo de 2025 \\ \hline
-%2      & Se completa hasta el punto 9 inclusive
+2      & Se completa hasta el punto 9 inclusive               & 19 de mayo de 2025 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & {día} de {mes} de 202X \\ \hline
@@ -333,7 +335,7 @@ A continuación, se detallan las épicas y sus respectivas historias de usuario:
 
   \item \textbf{Épica 7: redacción del trabajo final}
     \begin{itemize}
-      \item \textbf{HU13:} Como alumno de posgrado, quiero redactar la memoria escrita del trabajo final, incorporando antecedentes, metodología, resultados y conclusiones.  
+      \item \textbf{HU13:} Como alumno de posgrado, quiero redactar la memoria escrita del trabajo final, con antecedentes, metodología, resultados y conclusiones.  
       \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 8}
 
       \item \textbf{HU14:} Como autor, quiero adaptar el documento a los lineamientos formales de la universidad para asegurar su correcta presentación.  
@@ -447,7 +449,7 @@ A continuación, se detallan las épicas y sus respectivas historias de usuario:
       \begin{itemize}
         \item Se utilizó control de versiones (Git) para registrar avances del proyecto.
         \item Los experimentos de modelado se guardaron en forma estructurada (scripts, parámetros).
-        \item La replicabilidad fue validada ejecutando el pipeline en una sesión independiente.
+        \item La replicabilidad fue validada con el pipeline en una sesión independiente.
       \end{itemize}
     \end{itemize}
 
@@ -579,10 +581,21 @@ HU3 & Importar el dataset en entorno de trabajo (Python) y validar estructura ge
 HU3 & Identificar y cuantificar valores nulos, inconsistentes o duplicados & 4 h & Alta \\ \hline
 HU3 & Realizar limpieza inicial: imputación, eliminación de duplicados y errores obvios & 6 h & Alta \\ \hline
 HU3 & Analizar la distribución de variables numéricas mediante histogramas y boxplots & 6 h & Alta \\ \hline
-HU3 & Detectar y tratar outliers utilizando técnicas estadísticas (IQR, Z-score) & 6 h & Alta \\ \hline
+HU3 & Detectar y tratar outliers con técnicas estadísticas (IQR, Z-score) & 6 h & Alta \\ \hline
 HU3 & Generar un informe exploratorio con visualizaciones y estadísticas descriptivas & 6 h & Alta \\ \hline
 HU3 & Dividir el dataset en subconjuntos por tipo de proyecto o año (si aplica) & 4 h & Media \\ \hline
 HU3 & Documentar el pipeline de limpieza con justificación de decisiones & 4 h & Alta \\ \hline
+HU3 (Complementaria) & Investigar e incorporar información contextual externa (región, inflación, etc.) & 6 h & Media \\ \hline
+
+\end{tabularx}
+\end{table}
+
+\begin{table}[htpb]
+\centering
+\begin{tabularx}{\linewidth}{@{}|c|X|c|c|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0}
+Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
 
 HU4 & Clasificar variables por tipo (numéricas, categóricas, temporales, target) & 4 h & Alta \\ \hline
 HU4 & Evaluar correlaciones entre variables numéricas y redundancia (matriz de correlación) & 6 h & Alta \\ \hline
@@ -590,8 +603,6 @@ HU4 & Analizar cardinalidad de variables categóricas y detectar categorías rar
 HU4 & Realizar análisis de varianza (ANOVA) o chi-cuadrado para evaluar importancia de variables & 6 h & Alta \\ \hline
 HU4 & Generar ranking de variables relevantes con técnicas automáticas (feature importance) & 6 h & Alta \\ \hline
 HU4 & Redactar informe técnico con las variables seleccionadas, criterios y limitaciones & 6 h & Alta \\ \hline
-
-HU3 (Complementaria) & Investigar e incorporar información contextual externa (región, inflación, etc.) & 6 h & Media \\ \hline
 HU4 (Opcional) & Aplicar técnicas de reducción de dimensionalidad (PCA o UMAP) y evaluar impacto & 6 h & Baja \\ \hline
 HU4 (Complementaria) & Visualizar relaciones multivariadas mediante pairplots o mapas de calor & 4 h & Media \\ \hline
 HU4 (Opcional) & Realizar clustering exploratorio para entender segmentos de proyectos & 6 h & Baja \\ \hline
@@ -603,18 +614,31 @@ HU5 & Implementar SMOTE y variantes avanzadas (BorderlineSMOTE, ADASYN) & 6 h & 
 HU5 & Comparar modelos entrenados con y sin balanceo y medir impacto en F1-score & 6 h & Alta \\ \hline
 HU5 & Documentar estrategia de balanceo adoptada y razones de su elección & 4 h & Alta \\ \hline
 HU5 & Validar el pipeline de balanceo con conjuntos de validación cruzada & 4 h & Alta \\ \hline
+HU5 (Complementaria) & Probar técnicas de balanceo basadas en generación de ruido o augmentación sintética & 4 h & Baja \\ \hline
 
 HU6 & Codificar variables categóricas nominales con one-hot encoding & 4 h & Alta \\ \hline
 HU6 & Codificar variables categóricas ordinales con label encoding o mappings personalizados & 4 h & Alta \\ \hline
 HU6 & Normalizar variables numéricas (min-max) y evaluar escalas & 4 h & Alta \\ \hline
+
+
+\end{tabularx}
+\end{table}
+
+\begin{table}[htpb]
+\centering
+\begin{tabularx}{\linewidth}{@{}|c|X|c|c|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0}
+Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
+
 HU6 & Estandarizar variables numéricas (z-score) y comparar con normalización & 4 h & Alta \\ \hline
 HU6 & Analizar la sensibilidad de los modelos a diferentes esquemas de codificación & 4 h & Media \\ \hline
 HU6 & Evaluar correlaciones post-codificación para evitar colinealidades artificiales & 4 h & Media \\ \hline
-HU6 & Implementar un pipeline reproducible de preprocesamiento (usando `Pipeline` de scikit-learn) & 6 h & Alta \\ \hline
+HU6 & Implementar un pipeline reproducible de preprocesamiento (`Pipeline` de scikit-learn) & 6 h & Alta \\ \hline
 HU6 & Validar integridad de los datos procesados (dimensiones, tipos, escalas esperadas) & 4 h & Alta \\ \hline
 HU6 & Documentar las decisiones de transformación de datos, con gráficos de antes y después & 4 h & Alta \\ \hline
 
-HU5 (Complementaria) & Probar técnicas de balanceo basadas en generación de ruido o augmentación sintética & 4 h & Baja \\ \hline
+
 HU6 (Opcional) & Probar codificación target encoding y evaluar sobreajuste con K-fold & 6 h & Baja \\ \hline
 HU6 (Complementaria) & Desarrollar funciones propias reutilizables para codificación y escalamiento & 6 h & Media \\ \hline
 HU6 (Opcional) & Generar versiones comprimidas del dataset para ejecución más rápida de modelos & 4 h & Baja \\ \hline
@@ -627,8 +651,23 @@ HU7 & Evaluar modelo en conjunto de prueba (hold-out) y registrar métricas fina
 HU7 & Analizar matriz de confusión y distribución de errores por clase & 4 h & Media \\ \hline
 HU7 & Comparar resultados con modelo base (regresión logística o árbol simple) & 4 h & Media \\ \hline
 HU7 & Documentar arquitectura, parámetros y desempeño del modelo final de clasificación & 4 h & Alta \\ \hline
+HU7 (Complementaria) & Entrenar variante del modelo de clasificación con LightGBM & 4 h & Media \\ \hline
+HU7 (Opcional) & Implementar curva Precision-Recall y optimizar umbral de decisión & 4 h & Baja \\ \hline
 
 HU8 & Seleccionar algoritmos de regresión adecuados (XGBoost, LightGBM, regresión múltiple) & 4 h & Alta \\ \hline
+
+
+
+\end{tabularx}
+\end{table}
+
+\begin{table}[htpb]
+\centering
+\begin{tabularx}{\linewidth}{@{}|c|X|c|c|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0}
+Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
+
 HU8 & Implementar modelo base de regresión y entrenar con datos preprocesados & 6 h & Alta \\ \hline
 HU8 & Realizar validación cruzada (k-fold) y evaluar MAE, RMSE, R² & 6 h & Alta \\ \hline
 HU8 & Aplicar técnicas de regularización (Lasso, Ridge) y comparar impacto & 4 h & Media \\ \hline
@@ -637,9 +676,8 @@ HU8 & Evaluar modelo en conjunto de prueba, generar gráfico de dispersión real
 HU8 & Analizar errores por categoría presupuestaria y posibles sesgos & 4 h & Media \\ \hline
 HU8 & Documentar resultados del modelo final y su aplicabilidad práctica & 4 h & Alta \\ \hline
 
-HU7 (Complementaria) & Entrenar variante del modelo de clasificación con LightGBM & 4 h & Media \\ \hline
+
 HU8 (Complementaria) & Comparar modelo de regresión con red neuronal simple (MLP) & 6 h & Baja \\ \hline
-HU7 (Opcional) & Implementar curva Precision-Recall y optimizar umbral de decisión & 4 h & Baja \\ \hline
 HU8 (Opcional) & Evaluar sensibilidad del modelo a outliers y aplicar técnicas de robustez & 4 h & Baja \\ \hline
 
 HU9 & Implementar método de interpretabilidad basado en SHAP para el modelo de clasificación & 6 h & Alta \\ \hline
@@ -649,9 +687,23 @@ HU9 & Aplicar análisis de importancia de variables por método de permutación 
 HU9 & Comparar resultados de SHAP con Feature Importance tradicional (XGBoost, LightGBM) & 4 h & Media \\ \hline
 HU9 & Evaluar consistencia entre modelos de clasificación y regresión respecto a variables clave & 4 h & Media \\ \hline
 HU9 & Preparar gráficos explicativos de interpretabilidad para uso en el informe final & 4 h & Alta \\ \hline
+HU9 (Complementaria) & Explorar herramientas de explicabilidad adicionales (LIME, ELI5) y comparar resultados & 6 h & Baja \\ \hline
+HU9 (Opcional) & Generar dashboard interactivo de interpretabilidad con SHAP o Plotly Dash & 6 h & Baja \\ \hline
 
 HU10 & Redactar sección metodológica detallada sobre interpretabilidad y validación del modelo & 6 h & Alta \\ \hline
 HU10 & Documentar errores comunes, desviaciones y limitaciones técnicas del enfoque usado & 6 h & Alta \\ \hline
+
+
+\end{tabularx}
+\end{table}
+
+\begin{table}[htpb]
+\centering
+\begin{tabularx}{\linewidth}{@{}|c|X|c|c|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0}
+Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
+
 HU10 & Organizar todos los resultados intermedios en un repositorio de evidencia (figuras, métricas, logs) & 4 h & Alta \\ \hline
 HU10 & Preparar anexos técnicos (tablas, configuraciones, parámetros de entrenamiento) & 4 h & Media \\ \hline
 HU10 & Escribir resumen ejecutivo de hallazgos clave para perfil no técnico & 4 h & Alta \\ \hline
@@ -659,8 +711,7 @@ HU10 & Validar consistencia de resultados con al menos un reentrenamiento comple
 HU10 & Consolidar todas las visualizaciones y tablas en formato compatible con el trabajo final & 6 h & Alta \\ \hline
 HU10 & Revisión cruzada de los datos usados, modelos entrenados y outputs finales para garantizar trazabilidad & 4 h & Alta \\ \hline
 
-HU9 (Complementaria) & Explorar herramientas de explicabilidad adicionales (LIME, ELI5) y comparar resultados & 6 h & Baja \\ \hline
-HU9 (Opcional) & Generar dashboard interactivo de interpretabilidad usando SHAP o Plotly Dash & 6 h & Baja \\ \hline
+
 HU10 (Complementaria) & Crear checklist de calidad para evaluación reproducible del proyecto & 4 h & Media \\ \hline
 HU10 (Opcional) & Preparar versión resumida tipo “executive deck” para stakeholders empresariales & 4 h & Baja \\ \hline
 
@@ -676,7 +727,19 @@ HU12 & Documentar cada experimento de entrenamiento en un log estructurado (fech
 
 HU13 & Redactar sección de introducción y justificación del proyecto & 4 h & Alta \\ \hline
 HU13 & Redactar el estado del arte y antecedentes técnicos con citas académicas & 5 h & Alta \\ \hline
-HU13 & Describir la metodología, incluyendo el enfoque CRISP-DM y diseño experimental & 4 h & Alta \\ \hline
+
+
+\end{tabularx}
+\end{table}
+
+\begin{table}[htpb]
+\centering
+\begin{tabularx}{\linewidth}{@{}|c|X|c|c|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0}
+Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
+
+HU13 & Describir la metodología, con el enfoque CRISP-DM y diseño experimental & 4 h & Alta \\ \hline
 HU13 & Redactar sección de resultados con métricas, gráficas y análisis comparativo & 4 h & Alta \\ \hline
 HU13 & Redactar las conclusiones, recomendaciones y posibles líneas futuras de trabajo & 3 h & Alta \\ \hline
 
@@ -698,7 +761,7 @@ HU16 & Ajustar discurso, transiciones y tiempos en función de los ensayos & 3 h
 \end{tabularx}
 \end{table}
 
-Este desglose representa una estimación aproximada de 94 horas efectivas, donde se cubren las tareas fundamentales asociadas a la construcción del modelo, la validación técnica y la documentación final. A lo largo del desarrollo del proyecto, se podrá ajustar el detalle de tareas, subdividir algunas de mayor complejidad o incorporar tareas adicionales en función de descubrimientos o desafíos surgidos en fases intermedias.
+Este desglose representa una estimación aproximada de 600 horas efectivas, donde se cubren las tareas fundamentales asociadas a la construcción del modelo, la validación técnica y la documentación final. A lo largo del desarrollo del proyecto, se podrá ajustar el detalle de tareas, subdividir algunas de mayor complejidad o incorporar tareas adicionales en función de descubrimientos o desafíos surgidos en fases intermedias.
 
 Este enfoque estructurado garantiza la trazabilidad del avance y facilitará una gestión iterativa del trabajo a lo largo de los sprints definidos en la planificación.
 
