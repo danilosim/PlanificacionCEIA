@@ -4,6 +4,9 @@
 ]{charter} 
 % Paquete para diagramas de Gantt en LaTeX
 \usepackage{pgfgantt}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage[spanish]{babel}
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
@@ -771,28 +774,29 @@ Este enfoque estructurado garantiza la trazabilidad del avance y facilitará una
 \section{10. Diagrama de Gantt}
 \label{sec:gantt}
 
+% \begin{landscape}
 \begin{figure}[htpb]
 \centering
+\resizebox{\textwidth}{!}{
 \begin{ganttchart}[
     hgrid,
     vgrid,
     time slot format=isodate,
-    compress calendar,
-    x unit=0.7cm,
+    x unit=0.1cm,
     milestone label anchor/.style={below=3pt},
-    bar height=0.6,
+    bar height=0.5,
     group label font=\bfseries,
     bar label font=\small\rmfamily,
     milestone label font=\small\rmfamily\itshape,
     title/.append style={draw=none, fill=gray!10},
     title label font=\bfseries\footnotesize,
     title label anchor/.style={below=-1.6ex}
-]{2025-04-29}{2025-11-30}
-\gantttitlecalendar{year, month=name} \\
+]{2025-05-1}{2025-11-30}
+\gantttitlecalendar{year, month=spanish} \\
 
-\ganttgroup{Planificación inicial}{2025-04-29}{2025-05-15} \\
-\ganttbar{Definición de cronograma y backlog}{2025-04-29}{2025-05-10} \\
-\ganttbar{Ajustes y validaciones con tutor}{2025-05-11}{2025-05-15} \\
+\ganttgroup{Planificación inicial}{2025-05-1}{2025-05-15} \\
+\ganttbar{Definición de cronograma y backlog}{2025-05-1}{2025-05-10} \\
+\ganttbar{Ajustes y validaciones con director}{2025-05-11}{2025-05-15} \\
 
 \ganttgroup{Relevamiento y análisis de datos}{2025-05-16}{2025-06-30} \\
 \ganttbar{Carga, limpieza y análisis exploratorio}{2025-05-16}{2025-06-05} \\
@@ -820,9 +824,11 @@ Este enfoque estructurado garantiza la trazabilidad del avance y facilitará una
 \ganttmilestone{Defensa final}{2025-11-30}
 
 \end{ganttchart}
+}
 \caption{Diagrama de Gantt del proyecto.}
 \label{fig:gantt}
 \end{figure}
+% \end{landscape}
 
 \section{11. Planificación de Sprints}
 
