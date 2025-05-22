@@ -718,7 +718,7 @@ HU10 & Revisión cruzada de los datos usados, modelos entrenados y outputs final
 
 
 HU10 (Complementaria) & Crear checklist de calidad para evaluación reproducible del proyecto & 4 h & Media \\ \hline
-HU10 (Opcional) & Preparar versión resumida tipo “executive deck” para stakeholders empresariales & 4 h & Baja \\ \hline
+HU10 (Opcional) & Preparar versión resumida tipo "executive deck" para stakeholders empresariales & 4 h & Baja \\ \hline
 
 HU11 & Redactar documento técnico sobre el pipeline de preprocesamiento (paso a paso) & 4 h & Alta \\ \hline
 HU11 & Incluir justificación de decisiones de limpieza, codificación y normalización de variables & 4 h & Alta \\ \hline
@@ -832,6 +832,8 @@ Este enfoque estructurado garantiza la trazabilidad del avance y facilitará una
 
 \section{11. Planificación de Sprints}
 
+Para el desarrollo del proyecto, se propone un plan de trabajo dividido en sprints con duración de 2 semanas cada uno.
+
 \begin{table}[htpb]
 \centering
 \caption{Planificación de sprints del proyecto}
@@ -839,29 +841,116 @@ Este enfoque estructurado garantiza la trazabilidad del avance y facilitará una
 \hline
 \rowcolor[HTML]{C0C0C0}
 Sprint & HU o fase & Tarea & Horas & Responsable & \% Completado \\ \hline
-Sprint 0 & HU1 & Analizar el alcance del proyecto y elaborar una primera versión del cronograma general & 6 h & Alumno & 100\% \\ \hline
-Sprint 0 & HU1 & Dividir el proyecto en fases e identificar dependencias & 4 h & Alumno & 100\% \\ \hline
-Sprint 1 & HU1 & Diseñar plan de sprints con hitos y revisión & 6 h & Alumno & 100\% \\ \hline
-Sprint 1 & HU1 & Revisar cronograma con director y ajustar plan & 2 h & Alumno & 100\% \\ \hline
-Sprint 1 & HU2 & Establecer rutina de seguimiento & 2 h & Alumno & 100\% \\ \hline
-Sprint 2 & HU2 & Actualizar backlog según bloqueos técnicos & 4 h & Alumno & 100\% \\ \hline
-Sprint 2 & HU2 & Ajustar cronograma según progreso real & 4 h & Alumno & 100\% \\ \hline
-Sprint 2 & HU2 & Documentar cambios en el plan & 2 h & Alumno & 100\% \\ \hline
-Sprint 3 & HU3 & Importar y validar dataset en entorno Python & 4 h & Alumno & 100\% \\ \hline
-Sprint 3 & HU3 & Identificar valores nulos y duplicados & 4 h & Alumno & 100\% \\ \hline
-Sprint 4 & HU3 & Limpieza inicial (imputación, duplicados) & 6 h & Alumno & 75\% \\ \hline
-Sprint 4 & HU3 & Análisis de variables con boxplots e histogramas & 6 h & Alumno & 50\% \\ \hline
-Sprint 5 & HU3 & Detección y tratamiento de outliers & 6 h & Alumno & 0\% \\ \hline
-Sprint 5 & HU3 & Generación de informe exploratorio & 6 h & Alumno & 0\% \\ \hline
-Sprint 6 & HU4 & Clasificación de variables y correlaciones & 10 h & Alumno & 0\% \\ \hline
-Sprint 7 & HU4 & ANOVA, chi-cuadrado y ranking de variables & 12 h & Alumno & 0\% \\ \hline
-Sprint 8 & HU4 & Redacción de informe técnico (variables clave) & 6 h & Alumno & 0\% \\ \hline
-Sprint 9 & HU5 & Balanceo: análisis, implementación y evaluación & 14 h & Alumno & 0\% \\ \hline
-Sprint 10 & HU6 & Codificación y escalado de variables & 12 h & Alumno & 0\% \\ \hline
-Sprint 11 & HU6 & Validación y documentación del pipeline & 10 h & Alumno & 0\% \\ \hline
+
+Sprint 1 & HU1 & Analizar el alcance del proyecto y elaborar cronograma general & 6 h & Alumno & 0\% \\ \hline
+Sprint 1 & HU1 & Dividir el proyecto en fases e identificar dependencias & 4 h & Alumno & 0\% \\ \hline
+Sprint 1 & HU1 & Diseñar plan de sprints con hitos y revisión & 6 h & Alumno & 0\% \\ \hline
+Sprint 1 & HU1 & Revisar cronograma con director y ajustar plan & 2 h & Alumno & 0\% \\ \hline
+Sprint 1 & HU2 & Establecer rutina de seguimiento semanal & 2 h & Alumno & 0\% \\ \hline
+Sprint 1 & HU2 & Actualizar backlog según bloqueos técnicos & 4 h & Alumno & 0\% \\ \hline
+Sprint 1 & HU2 & Ajustar cronograma según progreso real & 4 h & Alumno & 0\% \\ \hline
+Sprint 1 & HU2 & Documentar cambios en el plan & 2 h & Alumno & 0\% \\ \hline
+
+Sprint 2 & HU3 & Importar y validar dataset en entorno Python & 4 h & Alumno & 0\% \\ \hline
+Sprint 2 & HU3 & Identificar valores nulos y duplicados & 4 h & Alumno & 0\% \\ \hline
+Sprint 2 & HU3 & Limpieza inicial (imputación, duplicados) & 6 h & Alumno & 0\% \\ \hline
+Sprint 2 & HU3 & Análisis de variables con boxplots e histogramas & 6 h & Alumno & 0\% \\ \hline
+Sprint 2 & HU3 & Detección y tratamiento de outliers & 6 h & Alumno & 0\% \\ \hline
+Sprint 2 & HU3 & Generación de informe exploratorio & 6 h & Alumno & 0\% \\ \hline
+Sprint 2 & HU3 & Dividir dataset en subconjuntos & 4 h & Alumno & 0\% \\ \hline
+Sprint 2 & HU3 & Documentar pipeline de limpieza & 4 h & Alumno & 0\% \\ \hline
+
+Sprint 3 & HU4 & Clasificación de variables por tipo & 4 h & Alumno & 0\% \\ \hline
+Sprint 3 & HU4 & Evaluar correlaciones y redundancia & 6 h & Alumno & 0\% \\ \hline
+Sprint 3 & HU4 & Análisis de cardinalidad de variables & 4 h & Alumno & 0\% \\ \hline
+Sprint 3 & HU4 & ANOVA y chi-cuadrado & 6 h & Alumno & 0\% \\ \hline
+Sprint 3 & HU4 & Generar ranking de variables & 6 h & Alumno & 0\% \\ \hline
+Sprint 3 & HU4 & Redactar informe técnico & 6 h & Alumno & 0\% \\ \hline
+Sprint 3 & HU4 & Visualizar relaciones multivariadas & 4 h & Alumno & 0\% \\ \hline
+Sprint 3 & HU5 & Análisis de distribución y desbalance & 4 h & Alumno & 0\% \\ \hline
+
+Sprint 4 & HU5 & Implementar balanceo simple & 4 h & Alumno & 0\% \\ \hline
+Sprint 4 & HU5 & Evaluar impacto del balanceo & 4 h & Alumno & 0\% \\ \hline
+Sprint 4 & HU5 & Implementar SMOTE y variantes & 6 h & Alumno & 0\% \\ \hline
+Sprint 4 & HU5 & Comparar modelos con/sin balanceo & 6 h & Alumno & 0\% \\ \hline
+Sprint 4 & HU5 & Documentar estrategia de balanceo & 4 h & Alumno & 0\% \\ \hline
+Sprint 4 & HU5 & Validar pipeline de balanceo & 4 h & Alumno & 0\% \\ \hline
+Sprint 4 & HU6 & Codificación one-hot encoding & 4 h & Alumno & 0\% \\ \hline
+Sprint 4 & HU6 & Codificación label encoding & 4 h & Alumno & 0\% \\ \hline
+
+Sprint 5 & HU6 & Normalización min-max & 4 h & Alumno & 0\% \\ \hline
+Sprint 5 & HU6 & Estandarización z-score & 4 h & Alumno & 0\% \\ \hline
+Sprint 5 & HU6 & Análisis de sensibilidad & 4 h & Alumno & 0\% \\ \hline
+Sprint 5 & HU6 & Evaluar correlaciones post-codificación & 4 h & Alumno & 0\% \\ \hline
+Sprint 5 & HU6 & Implementar pipeline reproducible & 6 h & Alumno & 0\% \\ \hline
+Sprint 5 & HU6 & Validar integridad de datos & 4 h & Alumno & 0\% \\ \hline
+Sprint 5 & HU6 & Documentar transformaciones & 4 h & Alumno & 0\% \\ \hline
+Sprint 5 & HU7 & Seleccionar algoritmos de clasificación & 4 h & Alumno & 0\% \\ \hline
+
+Sprint 6 & HU7 & Implementar modelo base & 6 h & Alumno & 0\% \\ \hline
+Sprint 6 & HU7 & Validación cruzada & 6 h & Alumno & 0\% \\ \hline
+Sprint 6 & HU7 & Ajuste de hiperparámetros & 6 h & Alumno & 0\% \\ \hline
+Sprint 6 & HU7 & Evaluación en conjunto de prueba & 4 h & Alumno & 0\% \\ \hline
+Sprint 6 & HU7 & Análisis de matriz de confusión & 4 h & Alumno & 0\% \\ \hline
+Sprint 6 & HU7 & Comparación con modelo base & 4 h & Alumno & 0\% \\ \hline
+Sprint 6 & HU7 & Documentación del modelo & 4 h & Alumno & 0\% \\ \hline
+Sprint 6 & HU8 & Selección de algoritmos de regresión & 4 h & Alumno & 0\% \\ \hline
+
+Sprint 7 & HU8 & Implementar modelo base de regresión & 6 h & Alumno & 0\% \\ \hline
+Sprint 7 & HU8 & Validación cruzada & 6 h & Alumno & 0\% \\ \hline
+Sprint 7 & HU8 & Técnicas de regularización & 4 h & Alumno & 0\% \\ \hline
+Sprint 7 & HU8 & Ajuste de hiperparámetros & 6 h & Alumno & 0\% \\ \hline
+Sprint 7 & HU8 & Evaluación en conjunto de prueba & 4 h & Alumno & 0\% \\ \hline
+Sprint 7 & HU8 & Análisis de errores por categoría & 4 h & Alumno & 0\% \\ \hline
+Sprint 7 & HU8 & Documentación de resultados & 4 h & Alumno & 0\% \\ \hline
+
+Sprint 8 & HU9 & Implementar SHAP & 6 h & Alumno & 0\% \\ \hline
+Sprint 8 & HU9 & Visualización de valores SHAP & 4 h & Alumno & 0\% \\ \hline
+Sprint 8 & HU9 & Interpretaciones locales & 4 h & Alumno & 0\% \\ \hline
+Sprint 8 & HU9 & Análisis de importancia & 4 h & Alumno & 0\% \\ \hline
+Sprint 8 & HU9 & Comparación de resultados & 4 h & Alumno & 0\% \\ \hline
+Sprint 8 & HU9 & Evaluar consistencia entre modelos & 4 h & Alumno & 0\% \\ \hline
+Sprint 8 & HU9 & Preparar gráficos explicativos & 4 h & Alumno & 0\% \\ \hline
+Sprint 8 & HU10 & Redactar metodología & 6 h & Alumno & 0\% \\ \hline
+Sprint 8 & HU10 & Documentar errores y limitaciones & 6 h & Alumno & 0\% \\ \hline
+
+Sprint 9 & HU10 & Organizar resultados & 4 h & Alumno & 0\% \\ \hline
+Sprint 9 & HU10 & Preparar anexos técnicos & 4 h & Alumno & 0\% \\ \hline
+Sprint 9 & HU10 & Escribir resumen ejecutivo & 4 h & Alumno & 0\% \\ \hline
+Sprint 9 & HU10 & Validar consistencia & 6 h & Alumno & 0\% \\ \hline
+Sprint 9 & HU10 & Consolidar visualizaciones & 6 h & Alumno & 0\% \\ \hline
+Sprint 9 & HU10 & Revisión cruzada & 4 h & Alumno & 0\% \\ \hline
+Sprint 9 & HU11 & Redactar pipeline de preprocesamiento & 4 h & Alumno & 0\% \\ \hline
+Sprint 9 & HU11 & Justificar decisiones & 4 h & Alumno & 0\% \\ \hline
+
+Sprint 10 & HU11 & Documentar criterios & 4 h & Alumno & 0\% \\ \hline
+Sprint 10 & HU11 & Crear diagrama de flujo & 4 h & Alumno & 0\% \\ \hline
+Sprint 10 & HU12 & Configurar repositorio Git & 4 h & Alumno & 0\% \\ \hline
+Sprint 10 & HU12 & Registrar versiones & 4 h & Alumno & 0\% \\ \hline
+Sprint 10 & HU12 & Estandarizar estructura & 3 h & Alumno & 0\% \\ \hline
+Sprint 10 & HU12 & Documentar experimentos & 3 h & Alumno & 0\% \\ \hline
+Sprint 10 & HU13 & Redactar introducción & 4 h & Alumno & 0\% \\ \hline
+Sprint 10 & HU13 & Redactar estado del arte & 5 h & Alumno & 0\% \\ \hline
+
+Sprint 11 & HU13 & Describir metodología & 4 h & Alumno & 0\% \\ \hline
+Sprint 11 & HU13 & Redactar resultados & 4 h & Alumno & 0\% \\ \hline
+Sprint 11 & HU13 & Redactar conclusiones & 3 h & Alumno & 0\% \\ \hline
+Sprint 11 & HU14 & Adaptar formato & 3 h & Alumno & 0\% \\ \hline
+Sprint 11 & HU14 & Revisar estilo y ortografía & 4 h & Alumno & 0\% \\ \hline
+Sprint 11 & HU14 & Incorporar referencias & 3 h & Alumno & 0\% \\ \hline
+Sprint 11 & HU15 & Diseñar esquema presentación & 3 h & Alumno & 0\% \\ \hline
+Sprint 11 & HU15 & Crear diapositivas iniciales & 4 h & Alumno & 0\% \\ \hline
+
+Sprint 12 & HU15 & Elaborar visualizaciones & 4 h & Alumno & 0\% \\ \hline
+Sprint 12 & HU15 & Incluir resultados clave & 4 h & Alumno & 0\% \\ \hline
+Sprint 12 & HU15 & Revisar estilo gráfico & 2 h & Alumno & 0\% \\ \hline
+Sprint 12 & HU16 & Preparar guion & 3 h & Alumno & 0\% \\ \hline
+Sprint 12 & HU16 & Realizar ensayos & 4 h & Alumno & 0\% \\ \hline
+Sprint 12 & HU16 & Practicar respuestas & 3 h & Alumno & 0\% \\ \hline
+Sprint 12 & HU16 & Ajustar discurso & 3 h & Alumno & 0\% \\ \hline
+
 \end{tabularx}
 \end{table}
-
 
 \section{12. Normativa y cumplimiento de datos (gobernanza)}
 
@@ -882,7 +971,7 @@ Dado que Built Technologies opera en el mercado financiero y de tecnología apli
 Built Technologies ha autorizado expresamente el uso de datos con las siguientes condiciones:
 
 \begin{itemize}
-    \item Los datos utilizados fueron previamente \textbf{anonimizados}, eliminando cualquier identificador personal (nombres, direcciones, emails, etc.).
+    \item Los datos utilizados fueron previamente \textbf{anonimizados}. Se removió cualquier identificador personal (nombres, direcciones, emails, etc.).
     \item No se incluirán documentos escaneados, imágenes, contratos, ni PDFs asociados a identidades específicas.
     \item El dataset se empleará únicamente con fines de investigación académica dentro del alcance de este trabajo final.
     \item No se compartirán datos ni resultados sensibles fuera del ámbito autorizado por la empresa y la universidad.
@@ -955,14 +1044,14 @@ En consecuencia, el proyecto es viable desde el punto de vista normativo y étic
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
 Demora en la entrega de datos & 8 & 5 & 40 & 6 & 3 & 18 \\ \hline
 Calidad técnica del dataset & 7 & 6 & 42 & 6 & 4 & 24 \\ \hline
-Falta de disponibilidad del director & 6 & 6 & 36 & 5 & 3 & 15 \\ \hline
+Falta de disponibilidad del director & 6 & 6 & 36 & 6 & 6 & 36 \\ \hline
 Subestimación del esfuerzo de modelado & 6 & 7 & 42 & 5 & 5 & 25 \\ \hline
-Dificultad en comunicar resultados & 5 & 6 & 30 & 4 & 4 & 16 \\ \hline
+Dificultad en comunicar resultados & 5 & 6 & 30 & 5 & 6 & 30 \\ \hline
 \end{tabularx}
 \end{table}
 
 \textbf{Criterio adoptado:}  
-Se tomarán medidas de mitigación para los riesgos con RPN > 30.
+Se tomarán medidas de mitigación para los riesgos con RPN \> 39.
 
 \subsection*{c) Plan de mitigación}
 
@@ -1036,6 +1125,9 @@ Se tomarán medidas de mitigación para los riesgos con RPN > 30.
   
   \end{tabular}
   \end{table}
+
+\section{15. Sprint Retrospective}    
+\label{sec:sprint_retro}
 
   \begin{table}[htpb]
     \renewcommand{\arraystretch}{1.4}
