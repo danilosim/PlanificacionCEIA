@@ -832,117 +832,120 @@ Este enfoque estructurado garantiza la trazabilidad del avance y facilitará una
 
 \section{11. Planificación de Sprints}
 
-Organizar las tareas técnicas del proyecto en sprints de trabajo que permitan distribuir de forma equilibrada la carga horaria total, estimada en 600 horas.
-
-\textbf{Consigna:}
-\begin{itemize}
-  \item Completar una tabla que relacione sprints con HU y tareas técnicas correspondientes.
-  \item Incluir estimación en horas para cada tarea.
-  \item Indicar responsable y porcentaje de avance estimado o completado.
-  \item Contemplar también tareas de planificación, documentación, redacción de memoria y preparación de defensa.
-\end{itemize}
-
-\textbf{Conceptos clave:}
-\begin{itemize}
-  \item Una \'{e}pica es una unidad funcional amplia; una historia de usuario es una funcionalidad concreta; un sprint es una unidad de tiempo donde se ejecutan tareas.
-  \item Las tareas son el nivel más desagregado: permiten estimar tiempos, asignar responsables y monitorear progreso.
-\end{itemize}
-
-\textbf{Duración sugerida:}
-\begin{itemize}
-  \item Para un proyecto de 600 h, se recomienda planificar entre 10 y 12 sprints de aproximadamente 2 semanas cada uno.
-  \item Asignar entre 45 y 50 horas efectivas por sprint a tareas técnicas.
-  \item Reservar 100 a 120 h para actividades no técnicas (planificación, escritura, reuniones, defensa).
-\end{itemize}
-
-\textbf{Importante:}
-\begin{itemize}
-  \item En proyectos individuales, el responsable suele ser el propio autor.
-  \item Aun así, desagregar tareas facilita el seguimiento y mejora continua.
-\end{itemize}
-
-\textbf{Conversión opcional de Story Points a horas:}
-\begin{itemize}
-  \item 1 SP \(\approx\) 2 h como referencia flexible.
-  \item Tener en cuenta aproximaciones tipo Fibonacci.
-\end{itemize}
-
 \begin{table}[htpb]
 \centering
-\caption{Formato sugerido}
+\caption{Planificación de sprints del proyecto}
 \begin{tabularx}{\linewidth}{@{}|l|l|X|c|l|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0}
-Sprint & HU o fase & Tarea & Horas / SP & Responsable & \% Completado \\ \hline
-Sprint 0 & Planificación & Definir alcance y cronograma & 10 h & Alumno & 100\% \\ \hline
-Sprint 0 & Planificación & Reunión con tutor/cliente & 5 h & Alumno & 50\% \\ \hline
-Sprint 0 & Planificación & Ajuste de entregables & 6 h & Alumno & 25\% \\ \hline
-Sprint 1 & HU1 & Tarea 1 HU1 & 6 h / 3 SP & Alumno & 0\% \\ \hline
-Sprint 1 & HU1 & Tarea 2 HU1 & 10 h / 5 SP & Alumno & 0\% \\ \hline
-Sprint 2 & HU2 & Tarea 1 HU2 & 7 h / 5 SP & Alumno & 0\% \\ \hline
-... & ... & ... & ... & ... & ... \\ \hline
-Sprint 5 & Escritura & Redacción memoria & 50 h / 34 SP & Alumno & 0\% \\ \hline
-Sprint 6 & Defensa & Preparación exposición & 20 h / 13 SP & Alumno & 0\% \\ \hline
+Sprint & HU o fase & Tarea & Horas & Responsable & \% Completado \\ \hline
+Sprint 0 & HU1 & Analizar el alcance del proyecto y elaborar una primera versión del cronograma general & 6 h & Alumno & 100\% \\ \hline
+Sprint 0 & HU1 & Dividir el proyecto en fases e identificar dependencias & 4 h & Alumno & 100\% \\ \hline
+Sprint 1 & HU1 & Diseñar plan de sprints con hitos y revisión & 6 h & Alumno & 100\% \\ \hline
+Sprint 1 & HU1 & Revisar cronograma con director y ajustar plan & 2 h & Alumno & 100\% \\ \hline
+Sprint 1 & HU2 & Establecer rutina de seguimiento & 2 h & Alumno & 100\% \\ \hline
+Sprint 2 & HU2 & Actualizar backlog según bloqueos técnicos & 4 h & Alumno & 100\% \\ \hline
+Sprint 2 & HU2 & Ajustar cronograma según progreso real & 4 h & Alumno & 100\% \\ \hline
+Sprint 2 & HU2 & Documentar cambios en el plan & 2 h & Alumno & 100\% \\ \hline
+Sprint 3 & HU3 & Importar y validar dataset en entorno Python & 4 h & Alumno & 100\% \\ \hline
+Sprint 3 & HU3 & Identificar valores nulos y duplicados & 4 h & Alumno & 100\% \\ \hline
+Sprint 4 & HU3 & Limpieza inicial (imputación, duplicados) & 6 h & Alumno & 75\% \\ \hline
+Sprint 4 & HU3 & Análisis de variables con boxplots e histogramas & 6 h & Alumno & 50\% \\ \hline
+Sprint 5 & HU3 & Detección y tratamiento de outliers & 6 h & Alumno & 0\% \\ \hline
+Sprint 5 & HU3 & Generación de informe exploratorio & 6 h & Alumno & 0\% \\ \hline
+Sprint 6 & HU4 & Clasificación de variables y correlaciones & 10 h & Alumno & 0\% \\ \hline
+Sprint 7 & HU4 & ANOVA, chi-cuadrado y ranking de variables & 12 h & Alumno & 0\% \\ \hline
+Sprint 8 & HU4 & Redacción de informe técnico (variables clave) & 6 h & Alumno & 0\% \\ \hline
+Sprint 9 & HU5 & Balanceo: análisis, implementación y evaluación & 14 h & Alumno & 0\% \\ \hline
+Sprint 10 & HU6 & Codificación y escalado de variables & 12 h & Alumno & 0\% \\ \hline
+Sprint 11 & HU6 & Validación y documentación del pipeline & 10 h & Alumno & 0\% \\ \hline
 \end{tabularx}
 \end{table}
-
-\textbf{Recomendaciones:}
-\begin{itemize}
-  \item Verificar que la carga horaria por sprint sea equilibrada.
-  \item Usar sprints de 1 a 3 semanas, acordes al cronograma general.
-  \item Actualizar el \% completado durante el seguimiento del proyecto.
-  \item Considerar un sprint final exclusivo para pruebas, revisión y ajustes antes de la defensa.
-\end{itemize}
 
 
 \section{12. Normativa y cumplimiento de datos (gobernanza)}
 
-En esta sección se debe analizar si los datos utilizados en el proyecto están sujetos a normativas de protección de datos y privacidad, y en qué condiciones se pueden emplear.
+El presente proyecto hace uso de datos históricos estructurados y anonimizados provistos por Built Technologies, empresa con sede en Estados Unidos. Los datos incluyen información sobre presupuestos de construcción, características de proyectos y atributos de contratistas, sin contener identificadores personales de clientes.
 
-\textbf{Aspectos a considerar:}
+\subsection*{Regulación aplicable}
+
+Dado que Built Technologies opera en el mercado financiero y de tecnología aplicada a la construcción, y almacena datos sensibles en su plataforma, la empresa adhiere a estándares de cumplimiento como:
+
 \begin{itemize}
-  \item Evaluar si los datos están regulados por normativas como GDPR, Ley 25.326 de Protección de Datos Personales en Argentina, HIPAA u otras según jurisdicción y temática.
-  \item Determinar si el uso de los datos requiere consentimiento explícito de los usuarios involucrados.
-  \item Indicar si existen restricciones legales, técnicas o contractuales sobre el uso, compartición o publicación de los datos.
-  \item Aclarar si los datos provienen de fuentes licenciadas, de acceso público o bajo algún tipo de autorización especial.
-  \item Analizar la viabilidad del proyecto desde el punto de vista legal y ético, considerando la gobernanza de los datos.
+    \item \textbf{SOC 2}: Requiere políticas estrictas de manejo y almacenamiento de datos, aplicables a todo proveedor de servicios en la nube.
+    \item \textbf{CCPA} (California Consumer Privacy Act): Aplica si hay usuarios residentes en California y otorga derechos sobre el uso de sus datos.
+    \item \textbf{GDPR} (Reglamento General de Protección de Datos de la UE): En caso de usuarios o clientes europeos, la empresa debe asegurar trazabilidad, anonimización y consentimiento.
 \end{itemize}
 
-Este análisis es clave para garantizar el cumplimiento normativo y evitar conflictos legales durante el desarrollo y publicación del proyecto.
+\subsection*{Condiciones de uso}
 
+Built Technologies ha autorizado expresamente el uso de datos con las siguientes condiciones:
+
+\begin{itemize}
+    \item Los datos utilizados fueron previamente \textbf{anonimizados}, eliminando cualquier identificador personal (nombres, direcciones, emails, etc.).
+    \item No se incluirán documentos escaneados, imágenes, contratos, ni PDFs asociados a identidades específicas.
+    \item El dataset se empleará únicamente con fines de investigación académica dentro del alcance de este trabajo final.
+    \item No se compartirán datos ni resultados sensibles fuera del ámbito autorizado por la empresa y la universidad.
+\end{itemize}
+
+\subsection*{Evaluación ética y legal}
+
+En base al análisis realizado, se concluye que el uso de los datos:
+
+\begin{itemize}
+    \item Cumple con los lineamientos éticos del posgrado en Inteligencia Artificial.
+    \item No vulnera derechos de privacidad de individuos, dado que el conjunto de datos ha sido previamente anonimizado.
+    \item Se encuentra dentro del marco legal y contractual acordado con la empresa auspiciante.
+\end{itemize}
+
+En consecuencia, el proyecto es viable desde el punto de vista normativo y ético, siempre que se mantenga el tratamiento responsable de la información, sin reidentificación ni difusión pública de casos individuales.
 
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
-\begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
+\subsection*{a) Identificación y análisis de riesgos}
 
-Riesgo 2:
+\textbf{Riesgo 1: Demora en la entrega del dataset anonimizado por parte de la empresa.}
 \begin{itemize}
-	\item Severidad (S): X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+  \item Severidad (S): 8 \\
+  Sin datos, el proyecto no puede avanzar. Afecta el desarrollo desde el comienzo.
+  \item Probabilidad de ocurrencia (O): 5 \\
+  Es poco probable, pero podría retrasarse por razones administrativas o legales.
 \end{itemize}
 
-Riesgo 3:
+\textbf{Riesgo 2: Problemas técnicos con el volumen y la calidad de los datos históricos.}
 \begin{itemize}
-	\item Severidad (S):  X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+  \item Severidad (S): 7 \\
+  Un dataset mal estructurado o con errores comprometería los resultados del modelo.
+  \item Probabilidad de ocurrencia (O): 6 \\
+  Los datos son reales y extensos, lo que puede implicar inconsistencias.
 \end{itemize}
 
+\textbf{Riesgo 3: Falta de disponibilidad del director o colaboradores para revisión crítica.}
+\begin{itemize}
+  \item Severidad (S): 6 \\
+  La falta de feedback oportuno puede generar retrasos o errores en la orientación.
+  \item Probabilidad de ocurrencia (O): 6 \\
+  Las agendas laborales y académicas suelen tener conflictos.
+\end{itemize}
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+\textbf{Riesgo 4: Subestimación del tiempo necesario para tareas de modelado.}
+\begin{itemize}
+  \item Severidad (S): 6 \\
+  Podría comprometer la calidad del modelo o afectar los tiempos de entrega.
+  \item Probabilidad de ocurrencia (O): 7 \\
+  Es común en proyectos de IA, especialmente en etapas iniciales.
+\end{itemize}
+
+\textbf{Riesgo 5: Dificultad para explicar el modelo a un público no técnico.}
+\begin{itemize}
+  \item Severidad (S): 5 \\
+  Afecta la comprensión por parte del cliente o del jurado.
+  \item Probabilidad de ocurrencia (O): 6 \\
+  Puede suceder si la explicabilidad del modelo no es adecuadamente planificada.
+\end{itemize}
+
+\subsection*{b) Tabla de gestión de riesgos}
 
 \begin{table}[htpb]
 \centering
@@ -950,122 +953,112 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-\end{tabularx}%
+Demora en la entrega de datos & 8 & 5 & 40 & 6 & 3 & 18 \\ \hline
+Calidad técnica del dataset & 7 & 6 & 42 & 6 & 4 & 24 \\ \hline
+Falta de disponibilidad del director & 6 & 6 & 36 & 5 & 3 & 15 \\ \hline
+Subestimación del esfuerzo de modelado & 6 & 7 & 42 & 5 & 5 & 25 \\ \hline
+Dificultad en comunicar resultados & 5 & 6 & 30 & 4 & 4 & 16 \\ \hline
+\end{tabularx}
 \end{table}
 
-Criterio adoptado: 
+\textbf{Criterio adoptado:}  
+Se tomarán medidas de mitigación para los riesgos con RPN > 30.
 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+\subsection*{c) Plan de mitigación}
 
-Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
+\textbf{Riesgo 1: Demora en la entrega de datos}
+\begin{itemize}
+  \item Medida: establecer una fecha límite temprana con la empresa y confirmar por escrito la disponibilidad de datos.
+  \item Severidad (S*): 6 — con tiempo de respuesta acordado, el impacto se reduce.
+  \item Ocurrencia (O*): 3 — con seguimiento frecuente, baja la probabilidad.
+\end{itemize}
 
-c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
- 
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  \begin{itemize}
-	\item Severidad (S*): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O*): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
-	\end{itemize}
+\textbf{Riesgo 2: Calidad técnica del dataset}
+\begin{itemize}
+  \item Medida: planificar una etapa intensiva de validación y limpieza anticipada; preparar scripts reutilizables.
+  \item Severidad (S*): 6 — si se detectan errores temprano, se puede corregir sin impacto crítico.
+  \item Ocurrencia (O*): 4 — disminuye con testeo exploratorio desde el inicio.
+\end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-
-\end{consigna}
+\textbf{Riesgo 4: Subestimación del esfuerzo de modelado}
+\begin{itemize}
+  \item Medida: aplicar una planificación iterativa y flexible con espacio de buffer en los sprints.
+  \item Severidad (S*): 5 — si se gestiona adecuadamente, no afectará la entrega.
+  \item Ocurrencia (O*): 5 — se reduce con tareas bien desglosadas y cronograma realista.
+\end{itemize}
 
 \section{14. Sprint Review}
 \label{sec:sprint_review}
 
-La revisión de sprint (\emph{Sprint Review}) es una práctica fundamental en metodologías ágiles. Consiste en revisar y evaluar lo que se ha completado al finalizar un sprint. En esta instancia, se presentan los avances y se verifica si las funcionalidades cumplen con los criterios de aceptación establecidos. También se identifican entregables parciales y se consideran ajustes si es necesario.
-
-Aunque el proyecto aún se encuentre en etapa de planificación, esta sección permite proyectar cómo se evaluarán las funcionalidades más importantes del backlog. Esta mirada anticipada favorece la planificación enfocada en valor y permite reflexionar sobre posibles obstáculos.
-
-\textbf{Objetivo:} anticipar cómo se evaluará el avance del proyecto a medida que se desarrollen las funcionalidades, utilizando como base al menos cuatro historias de usuario del \emph{Product Backlog}.
-
-
-Seleccionar al menos 4 HU del Product Backlog. Para cada una, completar la siguiente tabla de revisión proyectada:
-
-\textbf{Formato sugerido:}
 \begin{table}[htpb]
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{|>{\raggedright\arraybackslash}m{2.5cm}|
-                >{\raggedright\arraybackslash}m{2.3cm}|
-                >{\raggedright\arraybackslash}m{3cm}|
-                >{\raggedright\arraybackslash}m{3cm}|
-                >{\raggedright\arraybackslash}m{3cm}|}
-\hline
-\rowcolor[HTML]{CCCCCC}
-\textbf{HU seleccionada} & \textbf{Tareas asociadas} & \textbf{Entregable esperado} & \textbf{¿Cómo sabrás que está cumplida?} & \textbf{Observaciones o riesgos} \\
-\hline
-                         & Tarea 1 &                             &                                           &                                     \\ \cline{2-2}
-\multirow{-2}{=}{HU1}    & Tarea 2 & \multirow{-2}{=}{Módulo funcional} & \multirow{-2}{=}{Cumple criterios de aceptación definidos} & \multirow{-2}{=}{Falta validar con el tutor} \\
-\hline
-                         & Tarea 1 &                             &                                           &                                     \\ \cline{2-2}
-\multirow{-2}{=}{HU3}    & Tarea 2 & \multirow{-2}{=}{Reporte generado} & \multirow{-2}{=}{Exportación disponible y clara} & \multirow{-2}{=}{Requiere datos reales} \\
-\hline
-                         & Tarea 1 &                             &                                           &                                     \\ \cline{2-2}
-\multirow{-2}{=}{HU5}    & Tarea 2 & \multirow{-2}{=}{Panel de gestión} & \multirow{-2}{=}{Roles diferenciados operativos} & \multirow{-2}{=}{Riesgo en integración} \\
-\hline
-                         & Tarea 1 &                             &                                           &                                     \\ \cline{2-2}
-\multirow{-2}{=}{HU7}    & Tarea 2 & \multirow{-2}{=}{Informe trimestral} & \multirow{-2}{=}{PDF con gráficos y evolución} & \multirow{-2}{=}{Puede faltar tiempo para ajustes} \\
-\hline
-\end{tabular}
-\end{table}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{|>{\raggedright\arraybackslash}m{2.5cm}|
+                  >{\raggedright\arraybackslash}m{2.3cm}|
+                  >{\raggedright\arraybackslash}m{3cm}|
+                  >{\raggedright\arraybackslash}m{3cm}|
+                  >{\raggedright\arraybackslash}m{3cm}|}
+  \hline
+  \rowcolor[HTML]{CCCCCC}
+  \textbf{HU seleccionada} & \textbf{Tareas asociadas} & \textbf{Entregable esperado} & \textbf{¿Cómo sabrás que está cumplida?} & \textbf{Observaciones o riesgos} \\
+  \hline
+  
+  \multirow{2}{=}{HU1}    
+  & Analizar el alcance del proyecto y elaborar cronograma general 
+  & \multirow{2}{=}{Plan de proyecto estructurado} 
+  & \multirow{2}{=}{Cronograma validado por el director y usado como base para los sprints} 
+  & \multirow{2}{=}{Puede haber demora en feedback del director} \\ \cline{2-2}
+  & Diseñar plan de sprints con hitos y fases & & & \\ 
+  \hline
+  
+  \multirow{2}{=}{HU3}    
+  & Importar el dataset y validar estructura 
+  & \multirow{2}{=}{Reporte técnico de EDA y limpieza de datos} 
+  & \multirow{2}{=}{Archivo procesado y script reproducible en Jupyter Notebook} 
+  & \multirow{2}{=}{Se requiere contar con los datos reales temprano} \\ \cline{2-2}
+  & Realizar limpieza inicial (duplicados, imputación, errores) & & & \\
+  \hline
+  
+  \multirow{2}{=}{HU5}    
+  & Implementar técnica de balanceo y validar su efecto 
+  & \multirow{2}{=}{Pipeline de datos balanceados y documentado} 
+  & \multirow{2}{=}{Se comparan métricas con y sin balanceo, mejora esperada en F1-score} 
+  & \multirow{2}{=}{El balanceo puede introducir ruido si no se evalúa bien} \\ \cline{2-2}
+  & Comparar modelos con y sin balanceo & & & \\
+  \hline
+  
+  \multirow{2}{=}{HU7}    
+  & Implementar modelo de clasificación y validarlo 
+  & \multirow{2}{=}{Modelo entrenado con métricas F1/AUC reportadas} 
+  & \multirow{2}{=}{Cumple umbral mínimo de F1-score definido y se documenta el desempeño} 
+  & \multirow{2}{=}{Poca capacidad de ajuste si el dataset no es representativo} \\ \cline{2-2}
+  & Ajustar hiperparámetros y documentar desempeño final & & & \\
+  \hline
+  
+  \end{tabular}
+  \end{table}
 
-\section{15. Sprint Retrospective}    
-\label{sec:sprint_retro}
-
-La retrospectiva de sprint es una práctica orientada a la mejora continua. Al finalizar un sprint, el equipo (o el alumno, si trabaja de forma individual) reflexiona sobre lo que funcionó bien, lo que puede mejorarse y qué acciones concretas pueden implementarse para trabajar mejor en el futuro.
-
-Durante la cursada se propuso el uso de la \textbf{Estrella de la Retrospectiva}, que organiza la reflexión en torno a cinco ejes:
-
-\begin{itemize}
-\item  ¿Qué hacer más?
-\item  ¿Qué hacer menos?
-\item  ¿Qué mantener?
-\item  ¿Qué empezar a hacer?
-\item  ¿Qué dejar de hacer?
-\end{itemize}
-
-Aun en una etapa temprana, esta herramienta permite que el alumno planifique su forma de trabajar, identifique anticipadamente posibles dificultades y diseñe estrategias de organización personal.
-
-\textbf{Objetivo:} reflexionar sobre las condiciones iniciales del proyecto, identificando fortalezas, posibles dificultades y estrategias de mejora, incluso antes del inicio del desarrollo.
-
-
-Completar la siguiente tabla tomando como referencia los cinco ejes de la Estrella de la Retrospectiva (\emph{Starfish} o estrella de mar). Esta instancia te ayudará a definir buenas prácticas desde el inicio y prepararte para enfrentar el trabajo de forma organizada y flexible. Se deberá completar la tabla al menos para 3 sprints técnicos y 1 no técnico.
-
-\textbf{Formato sugerido:}
-
-\begin{table}[htpb]
-\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{|>{\raggedright\arraybackslash}p{1.8cm}|
-                >{\raggedright\arraybackslash}p{2.3cm}|
-                >{\raggedright\arraybackslash}p{2.3cm}|
-                >{\raggedright\arraybackslash}p{2.3cm}|
-                >{\raggedright\arraybackslash}p{2.3cm}|
-                >{\raggedright\arraybackslash}p{2.3cm}|}
-\hline
-\rowcolor[HTML]{CCCCCC} 
-\textbf{Sprint tipo y N°} & \textbf{¿Qué hacer más?} & \textbf{¿Qué hacer menos?} & \textbf{¿Qué mantener?} & \textbf{¿Qué empezar a hacer?} & \textbf{¿Qué dejar de hacer?} \\
-\hline
-Sprint técnico - 1 & Validaciones continuas con el alumno & Cambios sin versión registrada & Pruebas con datos simulados & Documentar cambios propuestos & Ajustes sin análisis de impacto \\
-\hline
-Sprint técnico - 2 & Verificar configuraciones en múltiples escenarios & Modificar parámetros sin guardar historial & Perfiles reutilizables & Usar logs para configuración & Repetir pruebas manuales innecesarias \\
-\hline
-Sprint técnico - 8 & Comparar correlaciones con casos previos & Cambiar parámetros sin justificar & Revisión cruzada de métricas & Anotar configuraciones usadas & Trabajar sin respaldo de datos \\
-\hline
-Sprint no técnico - 12 (por ej.: ``Defensa'') & Ensayos orales con feedback & Cambiar contenidos en la memoria & Material visual claro & Dividir la presentación por bloques & Agregar gráficos difíciles de explicar \\
-\hline
-\end{tabular}
-\end{table}
+  \begin{table}[htpb]
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|>{\raggedright\arraybackslash}p{1.8cm}|
+                    >{\raggedright\arraybackslash}p{2.3cm}|
+                    >{\raggedright\arraybackslash}p{2.3cm}|
+                    >{\raggedright\arraybackslash}p{2.3cm}|
+                    >{\raggedright\arraybackslash}p{2.3cm}|
+                    >{\raggedright\arraybackslash}p{2.3cm}|}
+    \hline
+    \rowcolor[HTML]{CCCCCC} 
+    \textbf{Sprint tipo y N°} & \textbf{¿Qué hacer más?} & \textbf{¿Qué hacer menos?} & \textbf{¿Qué mantener?} & \textbf{¿Qué empezar a hacer?} & \textbf{¿Qué dejar de hacer?} \\
+    \hline
+    Sprint técnico - 1 & Validar estructura y limpieza del dataset & Dejar decisiones sin documentar & Iteraciones con Jupyter Notebook & Registrar versiones de los datasets & Asumir que los datos están limpios \\
+    \hline
+    Sprint técnico - 2 & Revisión de métricas al entrenar modelos & Cambiar hiperparámetros sin planificación & Reentrenar con validación cruzada & Planificar pruebas antes de modelar & Ejecutar notebooks sin objetivos claros \\
+    \hline
+    Sprint técnico - 8 & Revisar visualizaciones explicativas & Confiar ciegamente en los valores SHAP & Análisis de interpretabilidad por sección & Relacionar interpretabilidad con métricas de negocio & Incluir visualizaciones irrelevantes \\
+    \hline
+    Sprint no técnico - 12 (defensa) & Ensayar presentación con feedback externo & Reescribir toda la memoria en la última semana & Uso de estructuras claras para exponer resultados & Dividir presentación por bloques temáticos & Usar terminología técnica sin adaptación al público \\
+    \hline
+    \end{tabular}
+    \end{table}
 
 
 
