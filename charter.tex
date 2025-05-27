@@ -66,10 +66,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                & 12 de mayo de 2025 \\ \hline
 2      & Se completa hasta el punto 9 inclusive               & 19 de mayo de 2025 \\ \hline
-%		  Se puede agregar algo más \newline
-%		  En distintas líneas \newline
-%		  Así                                                    & {día} de {mes} de 202X \\ \hline
-%3      & Se completa hasta el punto 12 inclusive                & {día} de {mes} de 202X \\ \hline
+3      & Se completa hasta el punto 12 inclusive                & 26 de mayo de 2025 \\ \hline
 %4      & Se completa el plan	                                 & {día} de {mes} de 202X \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
@@ -174,7 +171,7 @@ La solución se compone de los siguientes bloques funcionales:
 \begin{itemize}
     \item \textbf{Módulo de extracción de datos}: identificación, scrapping y unificación de datos.
     \item \textbf{Módulo de procesamiento de datos}: limpieza, transformación y validación de los datos históricos estructurados.
-    \item \textbf{Módulo de entrenamiento}: entrenamiento de dos modelos: uno de clasificación binaria (suficiencia del préstamo) y otro de regresión multirrubro (predicción de costos por partida).
+    \item \textbf{Módulo de entrenamiento}: entrenamiento de dos modelos - uno de clasificación binaria (suficiencia del préstamo) y otro de regresión multirrubro (predicción de costos por partida).
     \item \textbf{Módulo de inferencia}: dado un nuevo proyecto con sus características, el sistema entrega predicciones de suficiencia y una tabla con los valores esperados por rubro presupuestario.
     \item \textbf{Módulo de visualización}: presenta los resultados a través de gráficos, tablas y explicaciones interpretables para el uso por parte del equipo financiero.
 \end{itemize}
@@ -286,75 +283,75 @@ A continuación, se detallan las épicas y sus respectivas historias de usuario:
 \begin{itemize}
   \item \textbf{Épica 1: planificación y organización del proyecto}
     \begin{itemize}
-      \item \textbf{HU1:} Como responsable del proyecto, quiero definir un cronograma tentativo con fases y sprints para distribuir el trabajo de manera equilibrada.  
-      \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 3}
+      \item \textbf{HU1:} como responsable del proyecto, quiero definir un cronograma tentativo con fases y sprints para distribuir el trabajo de manera equilibrada.  
+      \newline \textbf{Dificultad: 5} — \textbf{Complejidad: 3} — \textbf{Incertidumbre: 5} — \textbf{Story Points: 13}
 
-      \item \textbf{HU2:} Como estudiante, quiero actualizar y ajustar el backlog y el plan de trabajo según avances reales y obstáculos encontrados.  
-      \newline \textbf{Prioridad: Media} — \textbf{Story Points: 2}
+      \item \textbf{HU2:} como estudiante, quiero actualizar y ajustar el \textit{backlog} y el plan de trabajo según avances reales y obstáculos encontrados.  
+      \newline \textbf{Dificultad: 3} — \textbf{Complejidad: 2} — \textbf{Incertidumbre: 3} — \textbf{Story Points: 8}
     \end{itemize}
 
   \item \textbf{Épica 2: relevamiento y análisis de datos históricos}
     \begin{itemize}
-      \item \textbf{HU3:} Como analista de datos, quiero explorar y limpiar el \textit{dataset} histórico para asegurar que los datos sean utilizables para modelado.  
-      \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 3}
+      \item \textbf{HU3:} como analista de datos, quiero explorar y limpiar el \textit{dataset} histórico para asegurar que los datos sean utilizables para modelado.  
+      \newline \textbf{Dificultad: 5} — \textbf{Complejidad: 5} — \textbf{Incertidumbre: 5} — \textbf{Story Points: 21}
       
-      \item \textbf{HU4:} Como ingeniero de datos, quiero identificar las variables más relevantes para el análisis, clasificándolas según tipo y calidad.  
-      \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 3}
+      \item \textbf{HU4:} como ingeniero de datos, quiero identificar las variables más relevantes para el análisis, clasificándolas según tipo y calidad.  
+      \newline \textbf{Dificultad: 4} — \textbf{Complejidad: 5} — \textbf{Incertidumbre: 5} — \textbf{Story Points: 21}
     \end{itemize}
 
   \item \textbf{Épica 3: preprocesamiento y preparación de datos}
     \begin{itemize}
-      \item \textbf{HU5:} Como científico de datos, quiero balancear las clases de la variable objetivo para asegurar un entrenamiento adecuado del modelo de clasificación.  
-      \newline \textbf{Prioridad: Media} — \textbf{Story Points: 5}
+      \item \textbf{HU5:} como científico de datos, quiero balancear las clases de la variable objetivo para asegurar un entrenamiento adecuado del modelo de clasificación.  
+      \newline \textbf{Dificultad: 3} — \textbf{Complejidad: 3} — \textbf{Incertidumbre: 3} — \textbf{Story Points: 13}
 
-      \item \textbf{HU6:} Como científico de datos, quiero normalizar y codificar las variables categóricas y numéricas para que puedan ser interpretadas por los modelos.  
-      \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 3}
+      \item \textbf{HU6:} como científico de datos, quiero normalizar y codificar las variables categóricas y numéricas para que puedan ser interpretadas por los modelos.  
+      \newline \textbf{Dificultad: 4} — \textbf{Complejidad: 3} — \textbf{Incertidumbre: 4} — \textbf{Story Points: 13}
     \end{itemize}
 
   \item \textbf{Épica 4: entrenamiento y validación de modelos}
     \begin{itemize}
-      \item \textbf{HU7:} Como desarrollador de modelos, quiero entrenar un modelo de clasificación para predecir si los presupuestos cumplen con su objetivo, y evaluar su rendimiento con métricas como \textit{F1-score} y \textit{AUC}.  
-      \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 5}
+      \item \textbf{HU7:} como desarrollador de modelos, quiero entrenar un modelo de clasificación para predecir si los presupuestos cumplen con su objetivo, y evaluar su rendimiento con métricas como \textit{F1-score} y \textit{AUC}.  
+      \newline \textbf{Dificultad: 5} — \textbf{Complejidad: 4} — \textbf{Incertidumbre: 5} — \textbf{Story Points: 21}
 
-      \item \textbf{HU8:} Como desarrollador de modelos, quiero entrenar un modelo de regresión para estimar los costos por partida presupuestaria, y analizar su precisión mediante \textit{MAE} y \textit{RMSE}.  
-      \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 5}
+      \item \textbf{HU8:} como desarrollador de modelos, quiero entrenar un modelo de regresión para estimar los costos por partida presupuestaria, y analizar su precisión mediante \textit{MAE} y \textit{RMSE}.  
+      \newline \textbf{Dificultad: 5} — \textbf{Complejidad: 4} — \textbf{Incertidumbre: 5} — \textbf{Story Points: 21}
     \end{itemize}
 
   \item \textbf{Épica 5: interpretación, documentación y validación}
     \begin{itemize}
-      \item \textbf{HU9:} Como analista, quiero aplicar técnicas de interpretabilidad (\textit{SHAP}, \textit{Feature Importance}) para entender las variables que más influyen en las predicciones.  
-      \newline \textbf{Prioridad: Media} — \textbf{Story Points: 3}
+      \item \textbf{HU9:} como analista, quiero aplicar técnicas de interpretabilidad (\textit{SHAP}, \textit{Feature Importance}) para entender las variables que más influyen en las predicciones.  
+      \newline \textbf{Dificultad: 3} — \textbf{Complejidad: 2} — \textbf{Incertidumbre: 3} — \textbf{Story Points: 8}
 
-      \item \textbf{HU10:} Como responsable del proyecto, quiero documentar el proceso, los resultados y sus limitaciones para facilitar su presentación y revisión académica.  
-      \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 2}
+      \item \textbf{HU10:} como responsable del proyecto, quiero documentar el proceso, los resultados y sus limitaciones para facilitar su presentación y revisión académica.  
+      \newline \textbf{Dificultad: 4} — \textbf{Complejidad: 3} — \textbf{Incertidumbre: 3} — \textbf{Story Points: 13}
     \end{itemize}
 
   \item \textbf{Épica 6: sistematización y documentación técnica}
     \begin{itemize}
-      \item \textbf{HU11:} Como autor del modelo, quiero documentar todas las decisiones de preprocesamiento y justificación de selección de variables para asegurar trazabilidad.  
-      \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 3}
+      \item \textbf{HU11:} como autor del modelo, quiero documentar todas las decisiones de preprocesamiento y justificación de selección de variables para asegurar trazabilidad.  
+      \newline \textbf{Dificultad: 4} — \textbf{Complejidad: 3} — \textbf{Incertidumbre: 3} — \textbf{Story Points: 13}
 
-      \item \textbf{HU12:} Como desarrollador, quiero versionar el código y registrar los experimentos de modelado para facilitar replicabilidad futura.  
-      \newline \textbf{Prioridad: Media} — \textbf{Story Points: 3}
+      \item \textbf{HU12:} como desarrollador, quiero versionar el código y registrar los experimentos de modelado para facilitar replicabilidad futura.  
+      \newline \textbf{Dificultad: 3} — \textbf{Complejidad: 2} — \textbf{Incertidumbre: 3} — \textbf{Story Points: 8}
     \end{itemize}
 
-  \item \textbf{Épica 7: redacción del trabajo final}
-    \begin{itemize}
-      \item \textbf{HU13:} Como alumno de posgrado, quiero redactar la memoria escrita del trabajo final, con antecedentes, metodología, resultados y conclusiones.  
-      \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 8}
+  % \item \textbf{Épica 7: redacción del trabajo final}
+  %   \begin{itemize}
+  %     \item \textbf{HU13:} como alumno de posgrado, quiero redactar la memoria escrita del trabajo final, con antecedentes, metodología, resultados y conclusiones.  
+  %     \newline \textbf{Dificultad: 4} — \textbf{Complejidad: 3} — \textbf{Incertidumbre: 3} — \textbf{Story Points: 13}
 
-      \item \textbf{HU14:} Como autor, quiero adaptar el documento a los lineamientos formales de la universidad para asegurar su correcta presentación.  
-      \newline \textbf{Prioridad: Alta} — \text8bf{Story Points: 3}
-    \end{itemize}
+  %     \item \textbf{HU14:} como autor, quiero adaptar el documento a los lineamientos formales de la universidad para asegurar su correcta presentación.  
+  %     \newline \textbf{Dificultad: 4} — \textbf{Complejidad: 3} — \textbf{Incertidumbre: 3} — \textbf{Story Points: 13}
+  %   \end{itemize}
 
-  \item \textbf{Épica 8: preparación de la defensa oral}
-    \begin{itemize}
-      \item \textbf{HU15:} Como expositor, quiero preparar una presentación clara y visual para explicar el problema, la solución y los resultados a un jurado.  
-      \newline \textbf{Prioridad: Alta} — \textbf{Story Points: 5}
+  % \item \textbf{Épica 8: preparación de la defensa oral}
+  %   \begin{itemize}
+  %     \item \textbf{HU15:} Como expositor, quiero preparar una presentación clara y visual para explicar el problema, la solución y los resultados a un jurado.  
+  %     \newline \textbf{Dificultad: 4} — \textbf{Complejidad: 3} — \textbf{Incertidumbre: 4} — \textbf{Story Points: 13}
 
-      \item \textbf{HU16:} Como expositor, quiero ensayar la defensa oral para responder preguntas técnicas y asegurarme de cumplir con los tiempos estipulados.  
-      \newline \textbf{Prioridad: Media} — \textbf{Story Points: 3}
-    \end{itemize}
+  %     \item \textbf{HU16:} Como expositor, quiero ensayar la defensa oral para responder preguntas técnicas y asegurarme de cumplir con los tiempos estipulados.  
+  %     \newline \textbf{Dificultad: 3} — \textbf{Complejidad: 2} — \textbf{Incertidumbre: 3} — \textbf{Story Points: 8}
+  %   \end{itemize}
 \end{itemize}
 
 \section{7. Criterios de aceptación de historias de usuario}
@@ -393,7 +390,7 @@ A continuación, se detallan las épicas y sus respectivas historias de usuario:
         \item Se documentó la justificación técnica de la selección de cada variable.
       \end{itemize}
     \end{itemize}
-
+  \newpage
   \item \textbf{Épica 3: preprocesamiento y preparación de datos}
     \begin{itemize}
       \item \textbf{Criterios de aceptación HU5}
@@ -458,55 +455,55 @@ A continuación, se detallan las épicas y sus respectivas historias de usuario:
       \end{itemize}
     \end{itemize}
 
-  \item \textbf{Épica 7: Redacción del trabajo final}
-    \begin{itemize}
-      \item \textbf{Criterios de aceptación HU13}
-      \begin{itemize}
-        \item Se redactó un borrador completo de la memoria con introducción, metodología, resultados y conclusiones.
-        \item Se incluyeron tablas, gráficos y citas académicas relevantes.
-        \item La versión final fue revisada y corregida en base a retroalimentación del orientador.
-      \end{itemize}
+%   \item \textbf{Épica 7: redacción del trabajo final}
+%     \begin{itemize}
+%       \item \textbf{Criterios de aceptación HU13}
+%       \begin{itemize}
+%         \item Se redactó un borrador completo de la memoria con introducción, metodología, resultados y conclusiones.
+%         \item Se incluyeron tablas, gráficos y citas académicas relevantes.
+%         \item La versión final fue revisada y corregida en base a retroalimentación del orientador.
+%       \end{itemize}
 
-      \item \textbf{Criterios de aceptación HU14}
-      \begin{itemize}
-        \item El documento fue ajustado al formato requerido por la universidad.
-        \item Se verificó cumplimiento de normas de estilo, ortografía y citas bibliográficas.
-        \item El archivo final está listo para ser presentado ante la coordinación académica.
-      \end{itemize}
-    \end{itemize}
+%       \item \textbf{Criterios de aceptación HU14}
+%       \begin{itemize}
+%         \item El documento fue ajustado al formato requerido por la universidad.
+%         \item Se verificó cumplimiento de normas de estilo, ortografía y citas bibliográficas.
+%         \item El archivo final está listo para ser presentado ante la coordinación académica.
+%       \end{itemize}
+%     \end{itemize}
 
-  \item \textbf{Épica 8: Preparación de la defensa oral}
-    \begin{itemize}
-      \item \textbf{Criterios de aceptación HU15}
-      \begin{itemize}
-        \item Se elaboró una presentación visual con estructura clara (problema, solución, resultados).
-        \item Se incorporaron visualizaciones clave del modelo y sus métricas.
-        \item La presentación cumple con la duración y estilo requeridos para la defensa.
-      \end{itemize}
+%   \item \textbf{Épica 8: preparación de la defensa oral}
+%     \begin{itemize}
+%       \item \textbf{Criterios de aceptación HU15}
+%       \begin{itemize}
+%         \item Se elaboró una presentación visual con estructura clara (problema, solución, resultados).
+%         \item Se incorporaron visualizaciones clave del modelo y sus métricas.
+%         \item La presentación cumple con la duración y estilo requeridos para la defensa.
+%       \end{itemize}
 
-      \item \textbf{Criterios de aceptación HU16}
-      \begin{itemize}
-        \item Se realizaron al menos dos ensayos de defensa oral (simulados).
-        \item Se practicaron respuestas a posibles preguntas del jurado técnico.
-        \item Se ajustó el discurso para cumplir con el tiempo estipulado sin omitir secciones importantes.
-      \end{itemize}
-    \end{itemize}
+%       \item \textbf{Criterios de aceptación HU16}
+%       \begin{itemize}
+%         \item Se realizaron al menos dos ensayos de defensa oral (simulados).
+%         \item Se practicaron respuestas a posibles preguntas del jurado técnico.
+%         \item Se ajustó el discurso para cumplir con el tiempo estipulado sin omitir secciones importantes.
+%       \end{itemize}
+%     \end{itemize}
 \end{itemize}
 
 \section{8. Fases de CRISP-DM}
 
 \begin{enumerate}
   \item \textbf{Comprensión del negocio:}  
-  El objetivo principal del proyecto es asistir a analistas financieros de Built Technologies mediante modelos predictivos que permitan:
+  el objetivo principal del proyecto es asistir a analistas financieros de Built Technologies mediante modelos predictivos que permitan:
   \begin{itemize}
-    \item Estimar si el préstamo otorgado será suficiente para cubrir el presupuesto total de un proyecto de construcción.
-    \item Predecir el costo esperado por categoría presupuestaria (materiales, mano de obra, cimentación, etc.).
+    \item estimar si el préstamo otorgado será suficiente para cubrir el presupuesto total de un proyecto de construcción
+    \item predecir el costo esperado por categoría presupuestaria (materiales, mano de obra, cimentación, etc.)
   \end{itemize}
-  El valor agregado de incorporar IA radica en anticipar riesgos de subfinanciamiento y sobrecostos desde etapas tempranas del proceso crediticio.  
+  El valor agregado de incorporar IA radica en anticipar riesgos de subfinanciamiento y sobrecostos desde etapas tempranas del proceso crediticio.\\
   \textbf{Métricas de éxito:} precisión del modelo (\textit{F1-score} y \textit{AUC} para clasificación, \textit{MAE} y \textit{R²} para regresión), interpretabilidad y aplicabilidad práctica para el analista.
 
   \item \textbf{Comprensión de los datos:}  
-  El dataset proviene de registros históricos anonimizados de Built Technologies, con más de 10 años de datos sobre proyectos financiados.  
+  el dataset proviene de registros históricos anonimizados de Built Technologies, con más de 10 años de datos sobre proyectos financiados.  
   \begin{itemize}
     \item \textbf{Tipo:} datos estructurados tabulares, con variables numéricas y categóricas.
     \item \textbf{Origen:} base interna de proyectos y préstamos otorgados.
@@ -515,44 +512,44 @@ A continuación, se detallan las épicas y sus respectivas historias de usuario:
   \end{itemize}
 
   \item \textbf{Preparación de los datos:}  
-  Esta etapa incluye limpieza y transformación del \textit{dataset} para su uso por los modelos:
+  esta etapa incluye limpieza y transformación del \textit{dataset} para su uso por los modelos:
   \begin{itemize}
-    \item Eliminación de registros con errores evidentes o duplicados.
-    \item Tratamiento de valores nulos mediante imputación o eliminación.
-    \item Codificación de variables categóricas (\textit{one-hot encoding}).
-    \item Normalización y estandarización de variables numéricas.
-    \item Balanceo de clases para la variable objetivo en el modelo de clasificación.
-    \item Selección de variables relevantes mediante análisis exploratorio y técnicas automáticas (\textit{feature importance}, selección recursiva).
+    \item eliminación de registros con errores evidentes o duplicados
+    \item tratamiento de valores nulos mediante imputación o eliminación
+    \item codificación de variables categóricas (\textit{one-hot encoding})
+    \item normalización y estandarización de variables numéricas
+    \item balanceo de clases para la variable objetivo en el modelo de clasificación
+    \item selección de variables relevantes mediante análisis exploratorio y técnicas automáticas (\textit{feature importance}, selección recursiva)
   \end{itemize}
 
   \item \textbf{Modelado:}  
-  Se abordan dos problemas distintos:
+  se abordan dos problemas distintos:
   \begin{itemize}
-    \item \textbf{Probabilidad de completitud:} predecir si el préstamo será suficiente para cubrir los costos.
-    \item \textbf{Regresión multivariada:} estimar el costo por partida presupuestaria.
+    \item \textbf{probabilidad de completitud:} predecir si el préstamo será suficiente para cubrir los costos.
+    \item \textbf{regresión multivariada:} estimar el costo por partida presupuestaria.
   \end{itemize}
   Los algoritmos candidatos incluyen:
   \begin{itemize}
-    \item \textbf{Para clasificación:} \textit{Random Forest}, \textit{XGBoost}, Regresión Logística.
-    \item \textbf{Para regresión:} \textit{XGBoost Regressor}, \textit{LightGBM}, redes neuronales densas.
+    \item \textbf{para clasificación:} \textit{Random Forest}, \textit{XGBoost}, Regresión Logística.
+    \item \textbf{para regresión:} \textit{XGBoost Regressor}, \textit{LightGBM}, redes neuronales densas.
   \end{itemize}
   Se compararán diferentes modelos y se realizará validación cruzada.
 
   \item \textbf{Evaluación del modelo:}  
-  Se utilizarán diferentes métricas de rendimiento por tipo de modelo:
+  se utilizarán diferentes métricas de rendimiento por tipo de modelo:
   \begin{itemize}
-    \item \textbf{Clasificación:} \textit{F1-score}, precisión, \textit{recall}, \textit{AUC-ROC}.
-    \item \textbf{Regresión:} \textit{MAE} (error absoluto medio), \textit{RMSE} (raíz del error cuadrático medio), \textit{R²}.
+    \item \textbf{clasificación:} \textit{F1-score}, precisión, \textit{recall}, \textit{AUC-ROC}.
+    \item \textbf{regresión:} \textit{MAE} (error absoluto medio), \textit{RMSE} (raíz del error cuadrático medio), \textit{R²}.
   \end{itemize}
   Además, se aplicarán técnicas de interpretabilidad (\textit{SHAP}, \textit{feature importance}) para validar que los modelos son comprensibles para usuarios no técnicos.
 
   \item \textbf{Despliegue del modelo (opcional):}  
-  Dado que el proyecto es académico, no se contempla un despliegue a producción.  
+  dado que el proyecto es académico, no se contempla un despliegue a producción.  
   No obstante, se documentará cómo podría integrarse el modelo en un pipeline de análisis crediticio dentro de Built Technologies:
   \begin{itemize}
-    \item Exportación del modelo entrenado en formato compatible (.pkl, .joblib).
-    \item Sugerencia de integración vía API REST o servicio batch interno.
-    \item Propuesta de visualización simple para interpretación de resultados.
+    \item exportación del modelo entrenado en formato compatible (.pkl, .joblib)
+    \item sugerencia de integración vía API REST o servicio batch interno
+    \item propuesta de visualización simple para interpretación de resultados
   \end{itemize}
 \end{enumerate}
 
@@ -584,13 +581,6 @@ HU2 & Documentar los cambios realizados sobre el plan y justificar desviaciones 
 
 HU3 & Importar el dataset en entorno de trabajo (Python) y validar estructura general & 4 h & Alta \\ \hline
 HU3 & Identificar y cuantificar valores nulos, inconsistentes o duplicados & 4 h & Alta \\ \hline
-HU3 & Realizar limpieza inicial: imputación, eliminación de duplicados y errores obvios & 6 h & Alta \\ \hline
-HU3 & Analizar la distribución de variables numéricas mediante histogramas y boxplots & 6 h & Alta \\ \hline
-HU3 & Detectar y tratar outliers con técnicas estadísticas (IQR, Z-score) & 6 h & Alta \\ \hline
-HU3 & Generar un informe exploratorio con visualizaciones y estadísticas descriptivas & 6 h & Alta \\ \hline
-HU3 & Dividir el dataset en subconjuntos por tipo de proyecto o año (si aplica) & 4 h & Media \\ \hline
-HU3 & Documentar el pipeline de limpieza con justificación de decisiones & 4 h & Alta \\ \hline
-HU3 (Complementaria) & Investigar e incorporar información contextual externa (región, inflación, etc.) & 6 h & Media \\ \hline
 
 \end{tabularx}
 \end{table}
@@ -600,7 +590,14 @@ HU3 (Complementaria) & Investigar e incorporar información contextual externa (
 \begin{tabularx}{\linewidth}{@{}|c|X|c|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0}
-Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
+
+HU3 & Realizar limpieza inicial: imputación, eliminación de duplicados y errores obvios & 6 h & Alta \\ \hline
+HU3 & Analizar la distribución de variables numéricas mediante histogramas y boxplots & 6 h & Alta \\ \hline
+HU3 & Detectar y tratar outliers con técnicas estadísticas (IQR, Z-score) & 6 h & Alta \\ \hline
+HU3 & Generar un informe exploratorio con visualizaciones y estadísticas descriptivas & 6 h & Alta \\ \hline
+HU3 & Dividir el dataset en subconjuntos por tipo de proyecto o año (si aplica) & 4 h & Media \\ \hline
+HU3 & Documentar el pipeline de limpieza con justificación de decisiones & 4 h & Alta \\ \hline
+HU3 (Complementaria) & Investigar e incorporar información contextual externa (región, inflación, etc.) & 6 h & Media \\ \hline
 
 HU4 & Clasificar variables por tipo (numéricas, categóricas, temporales, target) & 4 h & Alta \\ \hline
 HU4 & Evaluar correlaciones entre variables numéricas y redundancia (matriz de correlación) & 6 h & Alta \\ \hline
@@ -618,13 +615,9 @@ HU5 & Evaluar impacto del balanceo sobre la distribución de variables & 4 h & M
 HU5 & Implementar SMOTE y variantes avanzadas (BorderlineSMOTE, ADASYN) & 6 h & Alta \\ \hline
 HU5 & Comparar modelos entrenados con y sin balanceo y medir impacto en F1-score & 6 h & Alta \\ \hline
 HU5 & Documentar estrategia de balanceo adoptada y razones de su elección & 4 h & Alta \\ \hline
-HU5 & Validar el pipeline de balanceo con conjuntos de validación cruzada & 4 h & Alta \\ \hline
-HU5 (Complementaria) & Probar técnicas de balanceo basadas en generación de ruido o augmentación sintética & 4 h & Baja \\ \hline
-
-HU6 & Codificar variables categóricas nominales con one-hot encoding & 4 h & Alta \\ \hline
-HU6 & Codificar variables categóricas ordinales con label encoding o mappings personalizados & 4 h & Alta \\ \hline
-HU6 & Normalizar variables numéricas (min-max) y evaluar escalas & 4 h & Alta \\ \hline
-
+HU5 & Analizar distribución de la variable objetivo y su desbalance (visual y cuantitativa) & 4 h & Media \\ \hline
+HU5 & Implementar técnica de balanceo simple (undersampling o oversampling clásico) & 4 h & Media \\ \hline
+HU5 & Evaluar impacto del balanceo sobre la distribución de variables & 4 h & Media \\ \hline
 
 \end{tabularx}
 \end{table}
@@ -636,6 +629,15 @@ HU6 & Normalizar variables numéricas (min-max) y evaluar escalas & 4 h & Alta \
 \rowcolor[HTML]{C0C0C0}
 Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
 
+HU5 & Implementar SMOTE y variantes avanzadas (BorderlineSMOTE, ADASYN) & 6 h & Alta \\ \hline
+HU5 & Comparar modelos entrenados con y sin balanceo y medir impacto en F1-score & 6 h & Alta \\ \hline
+HU5 & Documentar estrategia de balanceo adoptada y razones de su elección & 4 h & Alta \\ \hline
+HU5 & Validar el pipeline de balanceo con conjuntos de validación cruzada & 4 h & Alta \\ \hline
+HU5 (Complementaria) & Probar técnicas de balanceo basadas en generación de ruido o augmentación sintética & 4 h & Baja \\ \hline
+
+HU6 & Codificar variables categóricas nominales con one-hot encoding & 4 h & Alta \\ \hline
+HU6 & Codificar variables categóricas ordinales con label encoding o mappings personalizados & 4 h & Alta \\ \hline
+HU6 & Normalizar variables numéricas (min-max) y evaluar escalas & 4 h & Alta \\ \hline
 HU6 & Estandarizar variables numéricas (z-score) y comparar con normalización & 4 h & Alta \\ \hline
 HU6 & Analizar la sensibilidad de los modelos a diferentes esquemas de codificación & 4 h & Media \\ \hline
 HU6 & Evaluar correlaciones post-codificación para evitar colinealidades artificiales & 4 h & Media \\ \hline
@@ -652,15 +654,6 @@ HU7 & Seleccionar y justificar algoritmos candidatos para clasificación (p. ej.
 HU7 & Implementar modelo base de clasificación y entrenarlo con datos preprocesados & 6 h & Alta \\ \hline
 HU7 & Realizar validación cruzada (k-fold) y medir F1-score y AUC promedio & 6 h & Alta \\ \hline
 HU7 & Ajustar hiperparámetros (grid search o random search) y registrar mejoras & 6 h & Alta \\ \hline
-HU7 & Evaluar modelo en conjunto de prueba (hold-out) y registrar métricas finales & 4 h & Alta \\ \hline
-HU7 & Analizar matriz de confusión y distribución de errores por clase & 4 h & Media \\ \hline
-HU7 & Comparar resultados con modelo base (regresión logística o árbol simple) & 4 h & Media \\ \hline
-HU7 & Documentar arquitectura, parámetros y desempeño del modelo final de clasificación & 4 h & Alta \\ \hline
-HU7 (Complementaria) & Entrenar variante del modelo de clasificación con LightGBM & 4 h & Media \\ \hline
-HU7 (Opcional) & Implementar curva Precision-Recall y optimizar umbral de decisión & 4 h & Baja \\ \hline
-
-HU8 & Seleccionar algoritmos de regresión adecuados (XGBoost, LightGBM, regresión múltiple) & 4 h & Alta \\ \hline
-
 
 
 \end{tabularx}
@@ -673,6 +666,14 @@ HU8 & Seleccionar algoritmos de regresión adecuados (XGBoost, LightGBM, regresi
 \rowcolor[HTML]{C0C0C0}
 Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
 
+HU7 & Evaluar modelo en conjunto de prueba (hold-out) y registrar métricas finales & 4 h & Alta \\ \hline
+HU7 & Analizar matriz de confusión y distribución de errores por clase & 4 h & Media \\ \hline
+HU7 & Comparar resultados con modelo base (regresión logística o árbol simple) & 4 h & Media \\ \hline
+HU7 & Documentar arquitectura, parámetros y desempeño del modelo final de clasificación & 4 h & Alta \\ \hline
+HU7 (Complementaria) & Entrenar variante del modelo de clasificación con LightGBM & 4 h & Media \\ \hline
+HU7 (Opcional) & Implementar curva Precision-Recall y optimizar umbral de decisión & 4 h & Baja \\ \hline
+
+HU8 & Seleccionar algoritmos de regresión adecuados (XGBoost, LightGBM, regresión múltiple) & 4 h & Alta \\ \hline
 HU8 & Implementar modelo base de regresión y entrenar con datos preprocesados & 6 h & Alta \\ \hline
 HU8 & Realizar validación cruzada (k-fold) y evaluar MAE, RMSE, R² & 6 h & Alta \\ \hline
 HU8 & Aplicar técnicas de regularización (Lasso, Ridge) y comparar impacto & 4 h & Media \\ \hline
@@ -690,14 +691,6 @@ HU9 & Visualizar los valores SHAP globales (summary plot) e identificar variable
 HU9 & Generar interpretaciones locales de predicciones individuales (force plots) & 4 h & Media \\ \hline
 HU9 & Aplicar análisis de importancia de variables por método de permutación (como alternativa) & 4 h & Media \\ \hline
 HU9 & Comparar resultados de SHAP con Feature Importance tradicional (XGBoost, LightGBM) & 4 h & Media \\ \hline
-HU9 & Evaluar consistencia entre modelos de clasificación y regresión respecto a variables clave & 4 h & Media \\ \hline
-HU9 & Preparar gráficos explicativos de interpretabilidad para uso en el informe final & 4 h & Alta \\ \hline
-HU9 (Complementaria) & Explorar herramientas de explicabilidad adicionales (LIME, ELI5) y comparar resultados & 6 h & Baja \\ \hline
-HU9 (Opcional) & Generar dashboard interactivo de interpretabilidad con SHAP o Plotly Dash & 6 h & Baja \\ \hline
-
-HU10 & Redactar sección metodológica detallada sobre interpretabilidad y validación del modelo & 6 h & Alta \\ \hline
-HU10 & Documentar errores comunes, desviaciones y limitaciones técnicas del enfoque usado & 6 h & Alta \\ \hline
-
 
 \end{tabularx}
 \end{table}
@@ -709,6 +702,13 @@ HU10 & Documentar errores comunes, desviaciones y limitaciones técnicas del enf
 \rowcolor[HTML]{C0C0C0}
 Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
 
+HU9 & Evaluar consistencia entre modelos de clasificación y regresión respecto a variables clave & 4 h & Media \\ \hline
+HU9 & Preparar gráficos explicativos de interpretabilidad para uso en el informe final & 4 h & Alta \\ \hline
+HU9 (Complementaria) & Explorar herramientas de explicabilidad adicionales (LIME, ELI5) y comparar resultados & 6 h & Baja \\ \hline
+HU9 (Opcional) & Generar dashboard interactivo de interpretabilidad con SHAP o Plotly Dash & 6 h & Baja \\ \hline
+
+HU10 & Redactar sección metodológica detallada sobre interpretabilidad y validación del modelo & 6 h & Alta \\ \hline
+HU10 & Documentar errores comunes, desviaciones y limitaciones técnicas del enfoque usado & 6 h & Alta \\ \hline
 HU10 & Organizar todos los resultados intermedios en un repositorio de evidencia (figuras, métricas, logs) & 4 h & Alta \\ \hline
 HU10 & Preparar anexos técnicos (tablas, configuraciones, parámetros de entrenamiento) & 4 h & Media \\ \hline
 HU10 & Escribir resumen ejecutivo de hallazgos clave para perfil no técnico & 4 h & Alta \\ \hline
@@ -725,15 +725,6 @@ HU11 & Incluir justificación de decisiones de limpieza, codificación y normali
 HU11 & Documentar criterios para selección de variables y eliminación de atributos redundantes & 4 h & Alta \\ \hline
 HU11 & Crear diagrama de flujo del pipeline de datos para incluir en el informe técnico & 4 h & Media \\ \hline
 
-HU12 & Configurar un repositorio de control de versiones (Git) con estructura organizada por módulos & 4 h & Alta \\ \hline
-HU12 & Registrar versiones clave de scripts de modelado y preprocesamiento (commits etiquetados) & 4 h & Media \\ \hline
-HU12 & Estandarizar nombre de archivos y estructuras de carpetas para reproducibilidad & 3 h & Media \\ \hline
-HU12 & Documentar cada experimento de entrenamiento en un log estructurado (fecha, modelo, métricas) & 3 h & Media \\ \hline
-
-HU13 & Redactar sección de introducción y justificación del proyecto & 4 h & Alta \\ \hline
-HU13 & Redactar el estado del arte y antecedentes técnicos con citas académicas & 5 h & Alta \\ \hline
-
-
 \end{tabularx}
 \end{table}
 
@@ -744,6 +735,13 @@ HU13 & Redactar el estado del arte y antecedentes técnicos con citas académica
 \rowcolor[HTML]{C0C0C0}
 Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
 
+HU12 & Configurar un repositorio de control de versiones (Git) con estructura organizada por módulos & 4 h & Alta \\ \hline
+HU12 & Registrar versiones clave de scripts de modelado y preprocesamiento (commits etiquetados) & 4 h & Media \\ \hline
+HU12 & Estandarizar nombre de archivos y estructuras de carpetas para reproducibilidad & 3 h & Media \\ \hline
+HU12 & Documentar cada experimento de entrenamiento en un log estructurado (fecha, modelo, métricas) & 3 h & Media \\ \hline
+
+HU13 & Redactar sección de introducción y justificación del proyecto & 4 h & Alta \\ \hline
+HU13 & Redactar el estado del arte y antecedentes técnicos con citas académicas & 5 h & Alta \\ \hline
 HU13 & Describir la metodología, con el enfoque CRISP-DM y diseño experimental & 4 h & Alta \\ \hline
 HU13 & Redactar sección de resultados con métricas, gráficas y análisis comparativo & 4 h & Alta \\ \hline
 HU13 & Redactar las conclusiones, recomendaciones y posibles líneas futuras de trabajo & 3 h & Alta \\ \hline
@@ -829,7 +827,7 @@ Este enfoque estructurado garantiza la trazabilidad del avance y facilitará una
 \label{fig:gantt}
 \end{figure}
 % \end{landscape}
-
+\newpage
 \section{11. Planificación de Sprints}
 
 Para el desarrollo del proyecto, se propone un plan de trabajo dividido en sprints con duración de 2 semanas cada uno.
@@ -842,11 +840,11 @@ Para el desarrollo del proyecto, se propone un plan de trabajo dividido en sprin
 \rowcolor[HTML]{C0C0C0}
 Sprint & HU o fase & Tarea & Horas & Responsable & \% Completado \\ \hline
 
-Sprint 1 & HU1 & Analizar el alcance del proyecto y elaborar cronograma general & 6 h & Alumno & 0\% \\ \hline
-Sprint 1 & HU1 & Dividir el proyecto en fases e identificar dependencias & 4 h & Alumno & 0\% \\ \hline
-Sprint 1 & HU1 & Diseñar plan de sprints con hitos y revisión & 6 h & Alumno & 0\% \\ \hline
+Sprint 1 & HU1 & Analizar el alcance del proyecto y elaborar cronograma general & 6 h & Alumno & 100\% \\ \hline
+Sprint 1 & HU1 & Dividir el proyecto en fases e identificar dependencias & 4 h & Alumno & 100\% \\ \hline
+Sprint 1 & HU1 & Diseñar plan de sprints con hitos y revisión & 6 h & Alumno & 100\% \\ \hline
 Sprint 1 & HU1 & Revisar cronograma con director y ajustar plan & 2 h & Alumno & 0\% \\ \hline
-Sprint 1 & HU2 & Establecer rutina de seguimiento semanal & 2 h & Alumno & 0\% \\ \hline
+Sprint 1 & HU2 & Establecer rutina de seguimiento semanal & 2 h & Alumno & 50\% \\ \hline
 Sprint 1 & HU2 & Actualizar backlog según bloqueos técnicos & 4 h & Alumno & 0\% \\ \hline
 Sprint 1 & HU2 & Ajustar cronograma según progreso real & 4 h & Alumno & 0\% \\ \hline
 Sprint 1 & HU2 & Documentar cambios en el plan & 2 h & Alumno & 0\% \\ \hline
@@ -862,6 +860,17 @@ Sprint 2 & HU3 & Documentar pipeline de limpieza & 4 h & Alumno & 0\% \\ \hline
 
 Sprint 3 & HU4 & Clasificación de variables por tipo & 4 h & Alumno & 0\% \\ \hline
 Sprint 3 & HU4 & Evaluar correlaciones y redundancia & 6 h & Alumno & 0\% \\ \hline
+
+\end{tabularx}
+\end{table}
+
+\begin{table}[htpb]
+\centering
+\begin{tabularx}{\linewidth}{@{}|l|l|X|c|l|c|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0}
+Sprint & HU o fase & Tarea & Horas & Responsable & \% Completado \\ \hline
+
 Sprint 3 & HU4 & Análisis de cardinalidad de variables & 4 h & Alumno & 0\% \\ \hline
 Sprint 3 & HU4 & ANOVA y chi-cuadrado & 6 h & Alumno & 0\% \\ \hline
 Sprint 3 & HU4 & Generar ranking de variables & 6 h & Alumno & 0\% \\ \hline
@@ -895,6 +904,16 @@ Sprint 6 & HU7 & Análisis de matriz de confusión & 4 h & Alumno & 0\% \\ \hlin
 Sprint 6 & HU7 & Comparación con modelo base & 4 h & Alumno & 0\% \\ \hline
 Sprint 6 & HU7 & Documentación del modelo & 4 h & Alumno & 0\% \\ \hline
 Sprint 6 & HU8 & Selección de algoritmos de regresión & 4 h & Alumno & 0\% \\ \hline
+
+\end{tabularx}
+\end{table}
+
+\begin{table}[htpb]
+\centering
+\begin{tabularx}{\linewidth}{@{}|l|l|X|c|l|c|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0}
+Sprint & HU o fase & Tarea & Horas & Responsable & \% Completado \\ \hline
 
 Sprint 7 & HU8 & Implementar modelo base de regresión & 6 h & Alumno & 0\% \\ \hline
 Sprint 7 & HU8 & Validación cruzada & 6 h & Alumno & 0\% \\ \hline
@@ -939,6 +958,17 @@ Sprint 11 & HU14 & Adaptar formato & 3 h & Alumno & 0\% \\ \hline
 Sprint 11 & HU14 & Revisar estilo y ortografía & 4 h & Alumno & 0\% \\ \hline
 Sprint 11 & HU14 & Incorporar referencias & 3 h & Alumno & 0\% \\ \hline
 Sprint 11 & HU15 & Diseñar esquema presentación & 3 h & Alumno & 0\% \\ \hline
+
+\end{tabularx}
+\end{table}
+
+\begin{table}[htpb]
+\centering
+\begin{tabularx}{\linewidth}{@{}|l|l|X|c|l|c|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0}
+Sprint & HU o fase & Tarea & Horas & Responsable & \% Completado \\ \hline
+
 Sprint 11 & HU15 & Crear diapositivas iniciales & 4 h & Alumno & 0\% \\ \hline
 
 Sprint 12 & HU15 & Elaborar visualizaciones & 4 h & Alumno & 0\% \\ \hline
@@ -961,14 +991,14 @@ El presente proyecto hace uso de datos históricos estructurados y anonimizados 
 Dado que Built Technologies opera en el mercado financiero y de tecnología aplicada a la construcción, y almacena datos sensibles en su plataforma, la empresa adhiere a estándares de cumplimiento como:
 
 \begin{itemize}
-    \item \textbf{SOC 2}: Requiere políticas estrictas de manejo y almacenamiento de datos, aplicables a todo proveedor de servicios en la nube.
-    \item \textbf{CCPA} (California Consumer Privacy Act): Aplica si hay usuarios residentes en California y otorga derechos sobre el uso de sus datos.
-    \item \textbf{GDPR} (Reglamento General de Protección de Datos de la UE): En caso de usuarios o clientes europeos, la empresa debe asegurar trazabilidad, anonimización y consentimiento.
+    \item \textbf{SOC 2}: requiere políticas estrictas de manejo y almacenamiento de datos, aplicables a todo proveedor de servicios en la nube.
+    \item \textbf{CCPA} (\textit{California Consumer Privacy Act}): aplica si hay usuarios residentes en California y otorga derechos sobre el uso de sus datos.
+    \item \textbf{GDPR} (Reglamento General de Protección de Datos de la UE): en caso de usuarios o clientes europeos, la empresa debe asegurar trazabilidad, anonimización y consentimiento.
 \end{itemize}
 
 \subsection*{Condiciones de uso}
 
-Built Technologies ha autorizado expresamente el uso de datos con las siguientes condiciones:
+Built Technologies ha autorizado expresamente el uso de datos con las siguientes condiciones.
 
 \begin{itemize}
     \item Los datos utilizados fueron previamente \textbf{anonimizados}. Se removió cualquier identificador personal (nombres, direcciones, emails, etc.).
@@ -982,175 +1012,175 @@ Built Technologies ha autorizado expresamente el uso de datos con las siguientes
 En base al análisis realizado, se concluye que el uso de los datos:
 
 \begin{itemize}
-    \item Cumple con los lineamientos éticos del posgrado en Inteligencia Artificial.
-    \item No vulnera derechos de privacidad de individuos, dado que el conjunto de datos ha sido previamente anonimizado.
-    \item Se encuentra dentro del marco legal y contractual acordado con la empresa auspiciante.
+    \item cumple con los lineamientos éticos del posgrado en inteligencia artificial
+    \item no vulnera derechos de privacidad de individuos, dado que el conjunto de datos ha sido previamente anonimizado
+    \item se encuentra dentro del marco legal y contractual acordado con la empresa auspiciante
 \end{itemize}
 
 En consecuencia, el proyecto es viable desde el punto de vista normativo y ético, siempre que se mantenga el tratamiento responsable de la información, sin reidentificación ni difusión pública de casos individuales.
 
-\section{13. Gestión de riesgos}
-\label{sec:riesgos}
+% \section{13. Gestión de riesgos}
+% \label{sec:riesgos}
 
-\subsection*{a) Identificación y análisis de riesgos}
+% \subsection*{a) Identificación y análisis de riesgos}
 
-\textbf{Riesgo 1: Demora en la entrega del dataset anonimizado por parte de la empresa.}
-\begin{itemize}
-  \item Severidad (S): 8 \\
-  Sin datos, el proyecto no puede avanzar. Afecta el desarrollo desde el comienzo.
-  \item Probabilidad de ocurrencia (O): 5 \\
-  Es poco probable, pero podría retrasarse por razones administrativas o legales.
-\end{itemize}
+% \textbf{Riesgo 1: demora en la entrega del dataset anonimizado por parte de la empresa.}
+% \begin{itemize}
+%   \item Severidad (S): 8 \\
+%   Sin datos, el proyecto no puede avanzar. Afecta el desarrollo desde el comienzo.
+%   \item Probabilidad de ocurrencia (O): 5 \\
+%   Es poco probable, pero podría retrasarse por razones administrativas o legales.
+% \end{itemize}
 
-\textbf{Riesgo 2: Problemas técnicos con el volumen y la calidad de los datos históricos.}
-\begin{itemize}
-  \item Severidad (S): 7 \\
-  Un dataset mal estructurado o con errores comprometería los resultados del modelo.
-  \item Probabilidad de ocurrencia (O): 6 \\
-  Los datos son reales y extensos, lo que puede implicar inconsistencias.
-\end{itemize}
+% \textbf{Riesgo 2: problemas técnicos con el volumen y la calidad de los datos históricos.}
+% \begin{itemize}
+%   \item Severidad (S): 7 \\
+%   Un dataset mal estructurado o con errores comprometería los resultados del modelo.
+%   \item Probabilidad de ocurrencia (O): 6 \\
+%   Los datos son reales y extensos, lo que puede implicar inconsistencias.
+% \end{itemize}
 
-\textbf{Riesgo 3: Falta de disponibilidad del director o colaboradores para revisión crítica.}
-\begin{itemize}
-  \item Severidad (S): 6 \\
-  La falta de feedback oportuno puede generar retrasos o errores en la orientación.
-  \item Probabilidad de ocurrencia (O): 6 \\
-  Las agendas laborales y académicas suelen tener conflictos.
-\end{itemize}
+% \textbf{Riesgo 3: falta de disponibilidad del director o colaboradores para revisión crítica.}
+% \begin{itemize}
+%   \item Severidad (S): 6 \\
+%   La falta de feedback oportuno puede generar retrasos o errores en la orientación.
+%   \item Probabilidad de ocurrencia (O): 6 \\
+%   Las agendas laborales y académicas suelen tener conflictos.
+% \end{itemize}
 
-\textbf{Riesgo 4: Subestimación del tiempo necesario para tareas de modelado.}
-\begin{itemize}
-  \item Severidad (S): 6 \\
-  Podría comprometer la calidad del modelo o afectar los tiempos de entrega.
-  \item Probabilidad de ocurrencia (O): 7 \\
-  Es común en proyectos de IA, especialmente en etapas iniciales.
-\end{itemize}
+% \textbf{Riesgo 4: subestimación del tiempo necesario para tareas de modelado.}
+% \begin{itemize}
+%   \item Severidad (S): 6 \\
+%   Podría comprometer la calidad del modelo o afectar los tiempos de entrega.
+%   \item Probabilidad de ocurrencia (O): 7 \\
+%   Es común en proyectos de IA, especialmente en etapas iniciales.
+% \end{itemize}
 
-\textbf{Riesgo 5: Dificultad para explicar el modelo a un público no técnico.}
-\begin{itemize}
-  \item Severidad (S): 5 \\
-  Afecta la comprensión por parte del cliente o del jurado.
-  \item Probabilidad de ocurrencia (O): 6 \\
-  Puede suceder si la explicabilidad del modelo no es adecuadamente planificada.
-\end{itemize}
+% \textbf{Riesgo 5: dificultad para explicar el modelo a un público no técnico.}
+% \begin{itemize}
+%   \item Severidad (S): 5 \\
+%   Afecta la comprensión por parte del cliente o del jurado.
+%   \item Probabilidad de ocurrencia (O): 6 \\
+%   Puede suceder si la explicabilidad del modelo no es adecuadamente planificada.
+% \end{itemize}
 
-\subsection*{b) Tabla de gestión de riesgos}
+% \subsection*{b) Tabla de gestión de riesgos}
 
-\begin{table}[htpb]
-\centering
-\begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
-\hline
-\rowcolor[HTML]{C0C0C0} 
-Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-Demora en la entrega de datos & 8 & 5 & 40 & 6 & 3 & 18 \\ \hline
-Calidad técnica del dataset & 7 & 6 & 42 & 6 & 4 & 24 \\ \hline
-Falta de disponibilidad del director & 6 & 6 & 36 & 6 & 6 & 36 \\ \hline
-Subestimación del esfuerzo de modelado & 6 & 7 & 42 & 5 & 5 & 25 \\ \hline
-Dificultad en comunicar resultados & 5 & 6 & 30 & 5 & 6 & 30 \\ \hline
-\end{tabularx}
-\end{table}
+% \begin{table}[htpb]
+% \centering
+% \begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
+% \hline
+% \rowcolor[HTML]{C0C0C0} 
+% Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
+% Demora en la entrega de datos & 8 & 5 & 40 & 6 & 3 & 18 \\ \hline
+% Calidad técnica del dataset & 7 & 6 & 42 & 6 & 4 & 24 \\ \hline
+% Falta de disponibilidad del director & 6 & 6 & 36 & 6 & 6 & 36 \\ \hline
+% Subestimación del esfuerzo de modelado & 6 & 7 & 42 & 5 & 5 & 25 \\ \hline
+% Dificultad en comunicar resultados & 5 & 6 & 30 & 5 & 6 & 30 \\ \hline
+% \end{tabularx}
+% \end{table}
 
-\textbf{Criterio adoptado:}  
-Se tomarán medidas de mitigación para los riesgos con RPN \> 39.
+% \textbf{Criterio adoptado}  
+% Se tomarán medidas de mitigación para los riesgos con RPN \> 39.
 
-\subsection*{c) Plan de mitigación}
+% \subsection*{c) Plan de mitigación}
 
-\textbf{Riesgo 1: Demora en la entrega de datos}
-\begin{itemize}
-  \item Medida: establecer una fecha límite temprana con la empresa y confirmar por escrito la disponibilidad de datos.
-  \item Severidad (S*): 6 — con tiempo de respuesta acordado, el impacto se reduce.
-  \item Ocurrencia (O*): 3 — con seguimiento frecuente, baja la probabilidad.
-\end{itemize}
+% \textbf{Riesgo 1: demora en la entrega de datos}
+% \begin{itemize}
+%   \item Medida: establecer una fecha límite temprana con la empresa y confirmar por escrito la disponibilidad de datos.
+%   \item Severidad (S*): 6 — con tiempo de respuesta acordado, el impacto se reduce.
+%   \item Ocurrencia (O*): 3 — con seguimiento frecuente, baja la probabilidad.
+% \end{itemize}
 
-\textbf{Riesgo 2: Calidad técnica del dataset}
-\begin{itemize}
-  \item Medida: planificar una etapa intensiva de validación y limpieza anticipada; preparar scripts reutilizables.
-  \item Severidad (S*): 6 — si se detectan errores temprano, se puede corregir sin impacto crítico.
-  \item Ocurrencia (O*): 4 — disminuye con testeo exploratorio desde el inicio.
-\end{itemize}
+% \textbf{Riesgo 2: calidad técnica del dataset}
+% \begin{itemize}
+%   \item Medida: planificar una etapa intensiva de validación y limpieza anticipada; preparar scripts reutilizables.
+%   \item Severidad (S*): 6 — si se detectan errores temprano, se puede corregir sin impacto crítico.
+%   \item Ocurrencia (O*): 4 — disminuye con testeo exploratorio desde el inicio.
+% \end{itemize}
 
-\textbf{Riesgo 4: Subestimación del esfuerzo de modelado}
-\begin{itemize}
-  \item Medida: aplicar una planificación iterativa y flexible con espacio de buffer en los sprints.
-  \item Severidad (S*): 5 — si se gestiona adecuadamente, no afectará la entrega.
-  \item Ocurrencia (O*): 5 — se reduce con tareas bien desglosadas y cronograma realista.
-\end{itemize}
+% \textbf{Riesgo 4: subestimación del esfuerzo de modelado}
+% \begin{itemize}
+%   \item Medida: aplicar una planificación iterativa y flexible con espacio de buffer en los sprints.
+%   \item Severidad (S*): 5 — si se gestiona adecuadamente, no afectará la entrega.
+%   \item Ocurrencia (O*): 5 — se reduce con tareas bien desglosadas y cronograma realista.
+% \end{itemize}
 
-\section{14. Sprint Review}
-\label{sec:sprint_review}
+% \section{14. Sprint Review}
+% \label{sec:sprint_review}
 
-\begin{table}[htpb]
-  \renewcommand{\arraystretch}{1.5}
-  \begin{tabular}{|>{\raggedright\arraybackslash}m{2.5cm}|
-                  >{\raggedright\arraybackslash}m{2.3cm}|
-                  >{\raggedright\arraybackslash}m{3cm}|
-                  >{\raggedright\arraybackslash}m{3cm}|
-                  >{\raggedright\arraybackslash}m{3cm}|}
-  \hline
-  \rowcolor[HTML]{CCCCCC}
-  \textbf{HU seleccionada} & \textbf{Tareas asociadas} & \textbf{Entregable esperado} & \textbf{¿Cómo sabrás que está cumplida?} & \textbf{Observaciones o riesgos} \\
-  \hline
+% \begin{table}[htpb]
+%   \renewcommand{\arraystretch}{1.5}
+%   \begin{tabular}{|>{\raggedright\arraybackslash}m{2.5cm}|
+%                   >{\raggedright\arraybackslash}m{2.3cm}|
+%                   >{\raggedright\arraybackslash}m{3cm}|
+%                   >{\raggedright\arraybackslash}m{3cm}|
+%                   >{\raggedright\arraybackslash}m{3cm}|}
+%   \hline
+%   \rowcolor[HTML]{CCCCCC}
+%   \textbf{HU seleccionada} & \textbf{Tareas asociadas} & \textbf{Entregable esperado} & \textbf{¿Cómo sabrás que está cumplida?} & \textbf{Observaciones o riesgos} \\
+%   \hline
   
-  \multirow{2}{=}{HU1}    
-  & Analizar el alcance del proyecto y elaborar cronograma general 
-  & \multirow{2}{=}{Plan de proyecto estructurado} 
-  & \multirow{2}{=}{Cronograma validado por el director y usado como base para los sprints} 
-  & \multirow{2}{=}{Puede haber demora en feedback del director} \\ \cline{2-2}
-  & Diseñar plan de sprints con hitos y fases & & & \\ 
-  \hline
+%   \multirow{2}{=}{HU1}    
+%   & Analizar el alcance del proyecto y elaborar cronograma general 
+%   & \multirow{2}{=}{Plan de proyecto estructurado} 
+%   & \multirow{2}{=}{Cronograma validado por el director y usado como base para los sprints} 
+%   & \multirow{2}{=}{Puede haber demora en feedback del director} \\ \cline{2-2}
+%   & Diseñar plan de sprints con hitos y fases & & & \\ 
+%   \hline
   
-  \multirow{2}{=}{HU3}    
-  & Importar el dataset y validar estructura 
-  & \multirow{2}{=}{Reporte técnico de EDA y limpieza de datos} 
-  & \multirow{2}{=}{Archivo procesado y script reproducible en Jupyter Notebook} 
-  & \multirow{2}{=}{Se requiere contar con los datos reales temprano} \\ \cline{2-2}
-  & Realizar limpieza inicial (duplicados, imputación, errores) & & & \\
-  \hline
+%   \multirow{2}{=}{HU3}    
+%   & Importar el dataset y validar estructura 
+%   & \multirow{2}{=}{Reporte técnico de EDA y limpieza de datos} 
+%   & \multirow{2}{=}{Archivo procesado y script reproducible en Jupyter Notebook} 
+%   & \multirow{2}{=}{Se requiere contar con los datos reales temprano} \\ \cline{2-2}
+%   & Realizar limpieza inicial (duplicados, imputación, errores) & & & \\
+%   \hline
   
-  \multirow{2}{=}{HU5}    
-  & Implementar técnica de balanceo y validar su efecto 
-  & \multirow{2}{=}{Pipeline de datos balanceados y documentado} 
-  & \multirow{2}{=}{Se comparan métricas con y sin balanceo, mejora esperada en F1-score} 
-  & \multirow{2}{=}{El balanceo puede introducir ruido si no se evalúa bien} \\ \cline{2-2}
-  & Comparar modelos con y sin balanceo & & & \\
-  \hline
+%   \multirow{2}{=}{HU5}    
+%   & Implementar técnica de balanceo y validar su efecto 
+%   & \multirow{2}{=}{Pipeline de datos balanceados y documentado} 
+%   & \multirow{2}{=}{Se comparan métricas con y sin balanceo, mejora esperada en F1-score} 
+%   & \multirow{2}{=}{El balanceo puede introducir ruido si no se evalúa bien} \\ \cline{2-2}
+%   & Comparar modelos con y sin balanceo & & & \\
+%   \hline
   
-  \multirow{2}{=}{HU7}    
-  & Implementar modelo de clasificación y validarlo 
-  & \multirow{2}{=}{Modelo entrenado con métricas F1/AUC reportadas} 
-  & \multirow{2}{=}{Cumple umbral mínimo de F1-score definido y se documenta el desempeño} 
-  & \multirow{2}{=}{Poca capacidad de ajuste si el dataset no es representativo} \\ \cline{2-2}
-  & Ajustar hiperparámetros y documentar desempeño final & & & \\
-  \hline
+%   \multirow{2}{=}{HU7}    
+%   & Implementar modelo de clasificación y validarlo 
+%   & \multirow{2}{=}{Modelo entrenado con métricas F1/AUC reportadas} 
+%   & \multirow{2}{=}{Cumple umbral mínimo de F1-score definido y se documenta el desempeño} 
+%   & \multirow{2}{=}{Poca capacidad de ajuste si el dataset no es representativo} \\ \cline{2-2}
+%   & Ajustar hiperparámetros y documentar desempeño final & & & \\
+%   \hline
   
-  \end{tabular}
-  \end{table}
+%   \end{tabular}
+%   \end{table}
 
-\section{15. Sprint Retrospective}    
-\label{sec:sprint_retro}
+% \section{15. Sprint Retrospective}    
+% \label{sec:sprint_retro}
 
-  \begin{table}[htpb]
-    \renewcommand{\arraystretch}{1.4}
-    \begin{tabular}{|>{\raggedright\arraybackslash}p{1.8cm}|
-                    >{\raggedright\arraybackslash}p{2.3cm}|
-                    >{\raggedright\arraybackslash}p{2.3cm}|
-                    >{\raggedright\arraybackslash}p{2.3cm}|
-                    >{\raggedright\arraybackslash}p{2.3cm}|
-                    >{\raggedright\arraybackslash}p{2.3cm}|}
-    \hline
-    \rowcolor[HTML]{CCCCCC} 
-    \textbf{Sprint tipo y N°} & \textbf{¿Qué hacer más?} & \textbf{¿Qué hacer menos?} & \textbf{¿Qué mantener?} & \textbf{¿Qué empezar a hacer?} & \textbf{¿Qué dejar de hacer?} \\
-    \hline
-    Sprint técnico - 1 & Validar estructura y limpieza del dataset & Dejar decisiones sin documentar & Iteraciones con Jupyter Notebook & Registrar versiones de los datasets & Asumir que los datos están limpios \\
-    \hline
-    Sprint técnico - 2 & Revisión de métricas al entrenar modelos & Cambiar hiperparámetros sin planificación & Reentrenar con validación cruzada & Planificar pruebas antes de modelar & Ejecutar notebooks sin objetivos claros \\
-    \hline
-    Sprint técnico - 8 & Revisar visualizaciones explicativas & Confiar ciegamente en los valores SHAP & Análisis de interpretabilidad por sección & Relacionar interpretabilidad con métricas de negocio & Incluir visualizaciones irrelevantes \\
-    \hline
-    Sprint no técnico - 12 (defensa) & Ensayar presentación con feedback externo & Reescribir toda la memoria en la última semana & Uso de estructuras claras para exponer resultados & Dividir presentación por bloques temáticos & Usar terminología técnica sin adaptación al público \\
-    \hline
-    \end{tabular}
-    \end{table}
+%   \begin{table}[htpb]
+%     \renewcommand{\arraystretch}{1.4}
+%     \begin{tabular}{|>{\raggedright\arraybackslash}p{1.8cm}|
+%                     >{\raggedright\arraybackslash}p{2.3cm}|
+%                     >{\raggedright\arraybackslash}p{2.3cm}|
+%                     >{\raggedright\arraybackslash}p{2.3cm}|
+%                     >{\raggedright\arraybackslash}p{2.3cm}|
+%                     >{\raggedright\arraybackslash}p{2.3cm}|}
+%     \hline
+%     \rowcolor[HTML]{CCCCCC} 
+%     \textbf{Sprint tipo y N°} & \textbf{¿Qué hacer más?} & \textbf{¿Qué hacer menos?} & \textbf{¿Qué mantener?} & \textbf{¿Qué empezar a hacer?} & \textbf{¿Qué dejar de hacer?} \\
+%     \hline
+%     Sprint técnico - 1 & Validar estructura y limpieza del dataset & Dejar decisiones sin documentar & Iteraciones con Jupyter Notebook & Registrar versiones de los datasets & Asumir que los datos están limpios \\
+%     \hline
+%     Sprint técnico - 2 & Revisión de métricas al entrenar modelos & Cambiar hiperparámetros sin planificación & Reentrenar con validación cruzada & Planificar pruebas antes de modelar & Ejecutar notebooks sin objetivos claros \\
+%     \hline
+%     Sprint técnico - 8 & Revisar visualizaciones explicativas & Confiar ciegamente en los valores SHAP & Análisis de interpretabilidad por sección & Relacionar interpretabilidad con métricas de negocio & Incluir visualizaciones irrelevantes \\
+%     \hline
+%     Sprint no técnico - 12 (defensa) & Ensayar presentación con feedback externo & Reescribir toda la memoria en la última semana & Uso de estructuras claras para exponer resultados & Dividir presentación por bloques temáticos & Usar terminología técnica sin adaptación al público \\
+%     \hline
+%     \end{tabular}
+%     \end{table}
 
 
 
